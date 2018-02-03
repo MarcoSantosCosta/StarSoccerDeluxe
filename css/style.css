@@ -9,11 +9,113 @@
  	font-family: 'ncaa-michigan';
  	src: url('../fonts/NCAA Michigan St Spartans.otf');
  }
-
+@font-face{
+	font-family:'DJB-Get-Digital';
+	src:url('../fonts/DJBGetDigital.ttf');
+}
  body {
  	margin: 0;
  	padding: 0;
  }
+
+ /*Header*/
+.box-header{
+	background-position:left right;
+	background-attachment:fixed;
+	background-size:110%;
+	background-repeat:no-repeat;
+	margin-top:0px;
+	background-image:url('../img/header.png'); 
+	height:100vh; 
+}
+.box-filter-header{
+	background-color:rgba(45,45,45,0.7);
+	background-size:100%;
+	background-repeat:no-repeat;
+	margin-top:0px;
+	height:100vh; 
+}
+.img-midias-2{
+ 	margin-top:20px;
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	height: 30px;
+ }
+ .countdown{
+ 	font-family:'DJB-Get-Digital','roboto';
+ 	font-size:8em; 
+ 	color:#e6e6e6;
+ 	margin-top: 0.2em;	
+ }
+ .frase-top{
+ 	font-family:'ncaa-michigan';
+ 	font-size:40pt;
+ 	color:#64ff00;
+ 	border: 1px  solid #64ff00;
+ }
+
+
+
+
+/* Menu*/
+
+#logossdmenu{
+ 	height: 50px !important;
+ 	margin-top: 5px;
+}
+.btnlogar-out{
+ 	border: 1px solid #64ff00;
+ 	background: none;
+ 	padding: 2px;
+ 	height: 45px;
+ 	line-height: 38px;
+ 	width: 120px;
+ 	margin: 10px 15px;
+ }
+
+ .btnlogar-in{
+ 	background-color: #64ff00;
+ 	color: #64ff00;
+ 	height: 100%;
+ }
+
+ .btnlogar-in p{
+ 	margin: 0;
+ 	padding: 0;
+ 	font-size: 1.6em;
+ }
+
+ .btnlogar-in a{
+ 	color:  #282828;
+ }
+
+
+
+
+.nav-wrapper{
+	background-color: #282828 !important;
+}
+
+.nav-wrapper a:hover{
+	color: #64ff00 !important;
+}
+.slider { 
+	min-height: 540px !important;
+}
+
+.slides{
+	height: 500px !important;
+}
+
+
+.slider li .ative{ 
+	height: 500px !important;
+}
+
+.slider .indicators .indicator-item.active{
+	background-color: #64ff00 !important;
+}
+
 
  .btn-floating i {
  	width: inherit;
@@ -26,7 +128,9 @@
  	text-indent: 2em;
  }
 
- p#textcuriosidades{	
+ .textcuriosidades{
+ 	text-align: justify;
+ 	color: #e6e6e6;
  	font-size: 1.4em;
  	margin-left: 20px !important;
  	margin-right: 50px !important;
@@ -105,6 +209,7 @@
 
  .font-secundaria{
  	font-size: 1.2em;
+ 	text-align: justify;
  }
 
  .background-ice{
@@ -113,19 +218,25 @@
 
  .background-grafite{
  	background-color: #282828;
+
+ }
+ .background-grafite-cur{
+ 	background-color: #282828;
  }
 
  .img-curiosidades{
  	padding-top: 25px;
  }
 
+ .border-green{
+ 	border-bottom: 2px solid #64ff00 !important;
+ }
+
  .img-campo{
  	background-image: url("../img/esquematatico.png");
  	background-size: 100%;
  	background-repeat: no-repeat;
- 	width: 100%;
- 	height: 900px;
- 	/*height: 100%;*/
+ 	height: 90vh;
  }
 
  .img-classicos{
@@ -136,7 +247,7 @@
  }
 
  .all-screen{
- 	height: 100%
+ 	height: auto;
  }
 
  .select-wrapper input.select-dropdown{
@@ -326,20 +437,20 @@
  }
 
  .tabs{
- 	background-color: #64ff00 !important;
+ 	background-color: transparent !important;
  }
 
  .tabs .indicator {
- 	background-color: #FFF !important;
+ 	background-color: #64FF00 !important;
  }
 
  .tabs .tab a {
- 	color: #FFF !important;
+ 	color: #64FF00 !important;
  	font-size: 16px;
  }
 
  .tabs .tab a:hover, .tabs .tab a.active {
- 	background-color: green;
+ 	background-color: #000;
  }
 
  .title-contact{
@@ -361,27 +472,21 @@
  	padding-left: 0px !important;
  }
 
-
- /* Menu temporario*/
-
- .icon-block {
- 	padding: 0 15px;
- }
- .icon-block .material-icons {
- 	font-size: inherit;
- }
- .pin-top {
- 	position: relative;
+ #curiosidades{
+ 	
+ 	height:100% !important;
  }
 
- .imgperfil{
- 	margin-top: 25px;
- 	margin-bottom: 25px;
- 	width: 360px;
- 	height: 280px;
- }
 
- .menu{
- 	font-weight: 14px;
- 	color: white;
- }
+
+/*Media Query*/
+@media (min-width:767){
+	.countdown{
+		font-size:5em;
+	}
+	
+	.tabs-content {
+	height: 1000px !important;
+
+
+}

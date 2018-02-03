@@ -1,180 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-		<title>SSD</title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>SSD</title>
 
-		<!-- CSS  -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-		<link href="css/timeline.css" type="text/css" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-		<!-- Load c3.css -->
-		<link href="css/c3.css" rel="stylesheet">
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/timeline.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- Load c3.css -->
+	<link href="css/c3.css" rel="stylesheet">
 
-		<link rel = "stylesheet" 
-		href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-		<script type = "text/javascript"
-		src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-		<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-		</script> 
-	</head>
-	<body>
-		<!-- ##################################  MENU  ###################################### -->
-		<div id="blue" class="block blue">
-			<nav class=" pushpin-demo-nav pinned black lighten-1" data-target="white" role="navigation">
-				<div class="nav-wrapper">
-					<ul id="nav-mobile" class="left menu">
-						<li><a href="#sobre" class="active">Sobre</a></li>
-						<li><a href="#destaques" >Destaques</a></li>
-						<li><a href="#apoio" >Apoio</a></li>
-						<li><a href="#curiosidades" >Curiosidades</a></li>
-						<li><a href="#organizadores" >Organizadores</a></li>
+	<link rel = "stylesheet" 
+	href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<script type = "text/javascript"
+	src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+	</script> 
+</head>
+<body>
+	<!-- ##################################  MENU  ###################################### -->
+	<div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
+				<ul id="nav-mobile" class="left hide-on-med-and-down">
+					<li><a href="#sobre">O Festival</a></li>
+					<li><a href="#destaques">Destaques</a></li>
+					<li><a href="#apoio">Apoio</a></li>
+					<li><a href="#curiosidades">Curiosidades</a></li>
+					<li><a href="#organizadores">Organizadores</a></li>
+				</ul>
+				<div class="btnlogar-out right">
+					<div class="btnlogar-in center">
+					<a href="#logar" class="font-primaria"><p>ENTRAR</p></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- ##################################  HOME
+	#################################### -->
+	<header class="box-header">
+		<div class="row">
+			<div class="box-filter-header">
+				<div class="col s12 m12 l12 xl12">
+					<div class="row">
+						<div class="col s12 m3 l3 xl3">
+							<img src="img/midias.png" class="center img-midias-2">
+						</div>	
+					</div>
+					<div class="row" style='height: 110px;'></div>
+
+					<div class="row">
+						<div class="col s12 m8 l8 xl8">
+							<div class="countdown center">48:59:45</div>
+							<div class="col s0 m2 l2 xl2"></div>
+							<div class="col s12 m8 l8 xl8">
+								<div class="frase-top center">
+									Vem pra Resenha
+								</div>
+							</div>
+
+							
+						</div> 
+						<div class="col s12 m4 l4 xl4" >
+							<img src="img/logo.png" height='450em' width='auto'>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- ##########################  BOTÃO VOLTAR AO TOPO  ############################## -->
+
+	<div class="fixed-action-btn">
+		<a class="btn-floating btn-large waves-effect waves-green black" href="#sobre">
+			<i class="material-icons">arrow_upward </i>
+		</a>
+	</div>
+
+	<!-- ##################################  SOBRE  ###################################### -->
+	<section id="sobre" class="background-ice">
+		<br><br><br>
+		<div class="container">
+			<div class="row">
+				<h3 class="center font-primaria">O FESTIVAL</h3>
+				<img src="img/meiodecampotitulo.png" id="img-under">
+				<div>
+					<div class="col s12 l5">
+						<p id="paragrafo" class="font-secundaria">O Soccer Star Deluxe (SSD) é um festival anual de Futebol de Botão, realizado no segundo domingo de fevereiro nos salões da Universidade Federal de Lavras (UFLA). É organizado pela Federação Internacional de Futebol de Botão (FIFB) e patrocinado pelas marcas esportistas mais renomadas do mercado.</p>
+						<p id="paragrafo" class="font-secundaria">O evento está em sua oitava edição e continua reunindo jogadores iniciantes e campeões botonistas de todos o mundo em um mesmo ambiente, trazendo um espirito de companheirismo e competição para as mesas desse esse esporte tão carismático.</p>
+					</div>
+					<div class="col s12 l7">
+						<img src="img/ofestival.png" id="img-festival" class="responsive-img">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+	</section>
+	<!-- ##################################  Destaques  ###################################### -->
+	<section id="destaques" class="background-grafite">
+		<br><br><br>
+		<div class="container">
+			<div class="row" id="text-white">
+				<h3 class="center font-primaria">DESTAQUES</h3>
+				<img src="img/meiodecampotitulo_branco.png" id="img-under"><br><br>
+				<div class="slider">
+					<ul class="slides">
+						<li>
+							<img src="img/campeao.png"> <!-- random image -->
+							<div class="caption center-align">
+								<h3>Campeão</h3>
+								<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+							</div>
+						</li>
+						<li>
+							<img src="img/regrasdojogo.png"> <!-- random image -->
+							<div class="caption right-align">
+								<h3>Regras do Jogo</h3>
+								<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+							</div>
+						</li>
+						<li>
+							<img src="img/chutetrivela.png"> <!-- random image -->
+							<div class="caption right-align">
+								<h3>Chute de Trivela</h3>
+								<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+							</div>
+						</li>
+						<li>
+							<img src="img/caiobrouxremelas.png"> <!-- random image -->
+							<div class="caption center-align">
+								<h3 style="background-color: black;">Caio Brou x Remelas</h3>
+								<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+							</div>
+						</li>
+						<li>
+							<img src="img/palermxddgame.png"> <!-- random image -->
+							<div class="caption center-align">
+								<h3>Palermo x DDGame</h3>
+								<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+							</div>
+						</li>
 					</ul>
 				</div>
-			</nav>
-		</div>
-
-		<!-- ##########################  BOTÃO VOLTAR AO TOPO  ############################## -->
-
-		<div class="fixed-action-btn">
-			<a class="btn-floating btn-large waves-effect waves-green black" href="#sobre">
-				<i class="material-icons">arrow_upward </i>
-			</a>
-		</div>
-
-		<!-- ##################################  SOBRE  ###################################### -->
-		<section id="sobre" class="background-ice">
-			<br><br><br>
-			<div class="container">
+			</div>
+		</div><br><br>
+	</section>
+	<!-- ##################################  Apoio  ###################################### -->
+	<section id="apoio" class="container-fluid background-ice">
+		<br><br><br>
+		<div class="container">
+			<div class="row">
+				<h3 class="center font-primaria">APOIO</h3>
+				<img src="img/meiodecampotitulo.png" id="img-under">
 				<div class="row">
-					<h3 class="center font-primaria">O FESTIVAL</h3>
-					<img src="img/meiodecampotitulo.png" id="img-under">
-					<div>
-						<div class="col s12 l5">
-							<p id="paragrafo" class="font-secundaria">O Soccer Star Deluxe (SSD) é um festival anual de Futebol de Botão, realizado no segundo domingo de fevereiro nos salões da Universidade Federal de Lavras (UFLA). É organizado pela Federação Internacional de Futebol de Botão (FIFB) e patrocinado pelas marcas esportistas mais renomadas do mercado.</p>
-							<p id="paragrafo" class="font-secundaria">O evento está em sua oitava edição e continua reunindo jogadores iniciantes e campeões botonistas de todos o mundo em um mesmo ambiente, trazendo um espirito de companheirismo e competição para as mesas desse esse esporte tão carismático.</p>
-						</div>
-						<div class="col s12 l7">
-							<img src="img/ofestival.png" id="img-festival" class="responsive-img">
-						</div>
+					<div class="col s12 m4 l4 xl4 img-nike">
+						<img id="icons-apoio" src="img/nike.png" class="responsive-img">
+					</div>
+					<div class="col s12 m4 l4 xl4 img-ea">
+						<img id="icons-apoio" src="img/ea.png" class="responsive-img">
+					</div>
+					<div class="col s12 m4 l4 img-pepsi">
+						<img id="icons-apoio" src="img/pepsi.png" class="responsive-img">
+					</div>
+				</div>
+				<div class="row">	        
+					<div class="col s12 m4 l4 xl4 img-heineken">
+						<img id="icons-apoio" src="img/heineken.png" class="responsive-img">
+					</div>
+					<div class="col s12 m4 l4 xl4 img-emirates">
+						<img id="icons-apoio" src="img/emirates.png" class="responsive-img">
+					</div>
+					<div class="col s12 m4 l4 xl4 img-unicef">
+						<img id="icons-apoio" src="img/unicef.png" class="responsive-img">
 					</div>
 				</div>
 			</div>
-			<br><br><br>
-		</section>
-		<!-- ##################################  Destaques  ###################################### -->
-		<section id="destaques" class="background-grafite">
-			<br><br><br>
-			<div class="container">
-				<div class="row" id="text-white">
-					<h3 class="center font-primaria">DESTAQUES</h3>
-					<img src="img/meiodecampotitulo_branco.png" id="img-under">
-					<div class="carousel">
-						<a class="carousel-item img-destaques text-green center" href="#one!">
-							<img src="img/campeao.png">
-							<h4>Campeão</h4>
-						</a>
-						<a class="carousel-item img-destaques text-green center" href="#two!">
-							<img src="img/regrasdojogo.png">
-							<h4>Regras do Jogo</h4>
-						</a>
-						<a class="carousel-item img-destaques text-green center" href="#three!">
-							<img src="img/chutetrivela.png">
-							<h4>Chute de Trivela</h4>
-						</a>
-						<a class="carousel-item img-destaques text-green center" href="#two!">
-							<img src="img/caiobrouxremelas.png">
-							<h4>Caio Brou x Remelas</h4>
-						</a>
-						<a class="carousel-item img-destaques text-green center" href="#three!">
-							<img src="img/palermxddgame.png">
-							<h4>Palermo x DDGame</h4>
-						</a>
-					</div>
-				</div>
-			</div><br>
-		</section>
-		<!-- ##################################  Apoio  ###################################### -->
-		<section id="apoio" class="container-fluid img-campo responsive-img background-ice">
-			<br><br><br>
-			<div class="container">
+		</div>
+		<br><br><br>
+	</section>
+	<!-- ##################################  Curiosidades  ###################################### -->
+	<section id="curiosidades" class="background-grafite-cur">
+		<br><br><br>
+		<div class="">
+			<div class="row background-grafite-cur">
+				<h3 class="center font-primaria" id="text-white">CURIOSIDADES</h3>
+				<img src="img/meiodecampotitulo_branco.png" id="img-under">
+				<br>
 				<div class="row">
-					<h3 class="center font-primaria">APOIO</h3>
-					<img src="img/meiodecampotitulo.png" id="img-under">
-					<div class="row">
-						<div class="col s12 m4 l4 xl4 img-nike">
-							<img id="icons-apoio" src="img/nike.png" class="responsive-img">
-						</div>
-						<div class="col s12 m4 l4 xl4 img-ea">
-							<img id="icons-apoio" src="img/ea.png" class="responsive-img">
-						</div>
-						<div class="col s12 m4 l4 img-pepsi">
-							<img id="icons-apoio" src="img/pepsi.png" class="responsive-img">
-						</div>
-					</div>
-					<div class="row">	        
-						<div class="col s12 m4 l4 xl4 img-heineken">
-							<img id="icons-apoio" src="img/heineken.png" class="responsive-img">
-						</div>
-						<div class="col s12 m4 l4 xl4 img-emirates">
-							<img id="icons-apoio" src="img/emirates.png" class="responsive-img">
-						</div>
-						<div class="col s12 m4 l4 xl4 img-unicef">
-							<img id="icons-apoio" src="img/unicef.png" class="responsive-img">
-						</div>
-					</div>
-				</div>
-			</div>
-			<br><br><br>
-		</section>
-		<!-- ##################################  Curiosidades  ###################################### -->
-		<section id="curiosidades" class="background-grafite">
-			<br><br><br>
-			<div class="container">
-				<div class="row">
-					<h3 class="center font-primaria" id="text-white">CURIOSIDADES</h3>
-					<img src="img/meiodecampotitulo_branco.png" id="img-under">
-					<br>
-					<div class="row background-ice">
-						<div class="col s12 m12 l12 xl12 paddingzero">
-							<ul class="tabs">
-								<li class="tab col s4"><a href="#reg"><b>Regras</b></a></li>
-								<li class="tab col s4"><a href="#his"><b>História</b></a></li>
-								<li class="tab col s4"><a href="#dad"><b>Dados</b></a></li>
-							</ul>
-						</div>
-						<div id="reg" class="col s12 m12 l12 xl12">
-							<div class="row">
-								<div class="col s12 m5 l5 x5 center">
-									<img src="img/reg.png" class="responsive-img img-curiosidades">
-								</div>
-								<div class="col s12 m7 l7 xl7 center">
-									<p id="textcuriosidades">
+					<ul class="tabs">
+						<li class="tab col s4"><a href="#reg"><b>Regras</b></a></li>
+						<li class="tab col s4"><a href="#his"><b>História</b></a></li>
+						<li class="tab col s4"><a href="#dad"><b>Dados</b></a></li>
+					</ul>
+					
+					<div id="reg" class="col s12 m12 l12 xl12 teste">
+						<div class="row border-green ">
+							<div class="col s12 m5 l5 x5 center hide-on-small-only">
+								<img src="img/reg.png" class="responsive-img img-curiosidades">
+							</div>
+							<div class="col s12 m7 l7 xl7 center ">
+								<p class="textcuriosidades">
 									O jogo possui em si várias modalidades. As mais conhecidas são as modalidades de 1 toque, também conhecida como "Regra Baiana", 3 toques, nomeada como "Regra Carioca" e a de 12 toques, batizada de "Regra Paulista". A mais famosa, a baiana, consiste em uma sequência de jogadas definidas por pressão sobre os botôes, a fim de movimentá-los para lugares estratégicos ou para a finalização de um gol. As outras modalidade são constituídas de basicamente as mesmas regras, com exceção de que, ao invés de os turnos se alternarem à cada uma jogada, eles se alternam a cada três, ou doze.
-									</p>
-								</div>
+								</p>
 							</div>
 						</div>
-						<div id="his" class="col s12 m12 l12 xl12">
-							<div class="row">
-								<div class="col s12 m5 l5 x5 center">
-									<img src="img/his.png" class="responsive-img img-curiosidades">
-								</div>
-								<div class="col s12 m7 l7 xl7 center">
-									<p id="textcuriosidades">O futebol de botão foi inventado em 1930 pelo brasileiro Geraldo Cardoso Décourt, quando esse tinha apenas 19 anos. Décourt, que também era pintor e ator, foi um grande entusiasta do esporte até o dia de sua morte, em 1998. O dia de seu nascimento, 14 de fevereiro, foi oficializado pelo governador Geraldo Alckmin, em São Paulo, no ano de 2001, como o "Dia do Botonista" e até hoje comemorado pelos fãs. O futebol de mesa foi reconhecido como uma modalidade desportiva oficial em 1977 e possui uma confederação para regulamento e orientação (CBFM: Confederação Brasileira de Futebol de Mesa).</p>
-								</div>
+					</div>
+					<div id="his" class="col s12 m12 l12 xl12">
+						<div class="row border-green">
+							<div class="col s12 m5 l5 x5 center hide-on-small-only">
+								<img src="img/his.png" class="responsive-img img-curiosidades">
+							</div>
+							<div class="col s12 m7 l7 xl7 center">
+								<p class="textcuriosidades">O futebol de botão foi inventado em 1930 pelo brasileiro Geraldo Cardoso Décourt, quando esse tinha apenas 19 anos. Décourt, que também era pintor e ator, foi um grande entusiasta do esporte até o dia de sua morte, em 1998. O dia de seu nascimento, 14 de fevereiro, foi oficializado pelo governador Geraldo Alckmin, em São Paulo, no ano de 2001, como o "Dia do Botonista" e até hoje comemorado pelos fãs. O futebol de mesa foi reconhecido como uma modalidade desportiva oficial em 1977 e possui uma confederação para regulamento e orientação (CBFM: Confederação Brasileira de Futebol de Mesa).</p>
 							</div>
 						</div>
-						<div id="dad" class="col s12 m12 l12 xl12">
-							<div class="row">
-								<div class="col s12 m5 l5 x5 center">
-									<img src="img/dad.png" class="responsive-img img-curiosidades">
-								</div>
-								<div class="col s12 m7 l7 xl7 center valign-wrapper">
-									<p id="textcuriosidades">Já foram jogados 12.111 jogos oficiais de futebol de botão e, nesses jogos, foram marcados mais de 65 mil gols. A maior goleada oficial já registrada nesse esporte foi de 17 a 2 em 2008, onde o jogador Zé Rubens prevaleceu sobre o seu adversário Edu Buzina. O time a ficar mais
+					</div>
+					<div id="dad" class="col s12 m12 l12 xl12">
+						<div class="row border-green">
+							<div class="col s12 m5 l5 x5 center hide-on-small-only">
+								<img src="img/dad.png" class="responsive-img img-curiosidades">
+							</div>
+							<div class="col s12 m7 l7 xl7 center valign-wrapper">
+								<p class="textcuriosidades">Já foram jogados 12.111 jogos oficiais de futebol de botão e, nesses jogos, foram marcados mais de 65 mil gols. A maior goleada oficial já registrada nesse esporte foi de 17 a 2 em 2008, onde o jogador Zé Rubens prevaleceu sobre o seu adversário Edu Buzina. O time a ficar mais
 									tempo invicto foi o Botafogo, que permaneceu ganhando por incríveis 38 jogos seguidos.</p>
 								</div>
 							</div>
@@ -183,22 +238,23 @@
 				</div>
 			</div>
 			<br>
+
 		</section>
 		<!-- ##################################  Organizadores  ###################################### -->
-		<section id="organizadores" class="container-fluid img-campo responsive-img background-ice">
+		<section id="organizadores" class="container-fluid background-ice">
 			<br><br><br>
 			<div class="container">
 				<div class="row">
 					<h3 class="center font-primaria">ORGANIZADORES</h3>
 					<img src="img/meiodecampotitulo.png" id="img-under">
-					<div class="row">
+					<div class="row botoes-icon">
 						<div class="col s12 m4 l4 xl4">
 							<img id="icons-org" src="img/jean.png" class="responsive-img">
 							<h5 class="center">Jean</h5>
 						</div>
 						<div class="col s12 m4 l4 xl4">
 							<img id="icons-org" src="img/joao.png" class="responsive-img">
-							<h5 class="center">João Neve</h5>
+							<h5 class="center ">João Neve</h5>
 						</div>
 						<div class="col s12 m4 l4 xl4">
 							<img id="icons-org" src="img/marco.png" class="responsive-img">
@@ -228,7 +284,6 @@
 			<div class="row contato1">
 				<div class="col s12 m6 l6 xl6 paddingzero">
 					<div id="map"></div>
-					
 				</div>	
 				<div class="col s12 m6 l6 xl6 ">
 					<div class="container-fluid" id="text-white">
@@ -261,17 +316,17 @@
 
 		<!--  Scripts-->
 		<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABGj3NxgxG1lRasuPi9sEK6_gi6ylzPl8&callback=initMap">
-		</script>
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="js/materialize.js"></script>
-		<script src="js/javascript.js" type="text/javascript"></script>
-		<!-- <script src="js/init.js"></script> -->
-		<script src="js/d3.min.js" charset="utf-8"></script>
-		<script src="js/c3.min.js"></script>
-		<script src="js/angular.min.js"></script>
-		<script src="js/angular.js"></script>
-		<script src="js/grafico.js"></script>
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABGj3NxgxG1lRasuPi9sEK6_gi6ylzPl8&callback=initMap" >
+	</script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/javascript.js" type="text/javascript"></script>
+	<!-- <script src="js/init.js"></script> -->
+	<script src="js/d3.min.js" charset="utf-8"></script>
+	<script src="js/c3.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/grafico.js"></script>
 
-	</body>
+</body>
 </html>
