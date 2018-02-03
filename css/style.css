@@ -5,6 +5,7 @@
  *
  * Made By MaterializeCSS.com
  */
+
  @font-face {
  	font-family: 'ncaa-michigan';
  	src: url('../fonts/NCAA Michigan St Spartans.otf');
@@ -487,6 +488,35 @@
 	
 	.tabs-content {
 	height: 1000px !important;
+}
+.back {
+    margin-left: 15px;
+    color: #64FF00;
+}
 
+.back:hover {
+    text-decoration: underline #64FF00;
+}
+
+.buttonHide {
+    background: none;
+    border: none;
+}
+
+.buttonHide {
+    background: none;
+    border: none;
+}
+
+.buttonHide:focus {
+    background: none;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    .img-classicos {
+        background-image: none;
+        background-color: #282828 !important;
+    }
 
 }
