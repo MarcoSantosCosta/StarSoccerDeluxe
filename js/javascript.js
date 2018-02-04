@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('ul.tabs').tabs({
-    /*swipeable : true   /* DESLIZAR TABS DAS CURIOSIDADES*/
+    swipeable : true   
     });
 });
 
@@ -34,3 +34,10 @@ $(document).ready(function(){
 function scrollto (target) {
 	$(target).scroll();
 }
+
+$(document).ready(function(){
+     $('.slider').slider();
+     $('.slider').height ='900px';
+});
+
+        
