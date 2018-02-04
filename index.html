@@ -5,47 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>SSD</title>
 
-
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/timeline.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Load c3.css -->
+    <link href="css/c3.css" rel="stylesheet">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-
-    <script type="text/javascript"
-            src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-    </script>
-
+    <link rel = "stylesheet" 
+    href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type = "text/javascript"
+    src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script> 
 </head>
 <body>
-<!-- ##################################  MENU  ###################################### -->
-<section id="header">
-<div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#header" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#sobre">O Festival</a></li>
-                <li><a href="#destaques">Destaques</a></li>
-                <li><a href="#apoio">Apoio</a></li>
-                <li><a href="#curiosidades">Curiosidades</a></li>
-                <li><a href="#organizadores">Organizadores</a></li>
-            </ul>
-            <div class="btnlogar-out right">
-                <div class="btnlogar-in center">
+    <!-- ##################################  MENU  ###################################### -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="#sobre">O Festival</a></li>
+                    <li><a href="#destaques">Destaques</a></li>
+                    <li><a href="#apoio">Apoio</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="#organizadores">Organizadores</a></li>
+                </ul>
+                <div class="btnlogar-out right">
+                    <div class="btnlogar-in center">
                     <a href="#logar" class="font-primaria"><p>ENTRAR</p></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-</div>
-<!-- ##################################  HOME
-#################################### -->
-
+        </nav>
+    </div>
+    <!-- ##################################  HOME
+    #################################### -->
     <header class="box-header">
         <div class="row">
             <div class="box-filter-header">
@@ -53,13 +51,13 @@
                     <div class="row">
                         <div class="col s12 m3 l3 xl3">
                             <img src="img/midias.png" class="center img-midias-2">
-                        </div>
+                        </div>  
                     </div>
                     <div class="row" style='height: 110px;'></div>
 
                     <div class="row">
                         <div class="col s12 m8 l8 xl8">
-                            <div class="countdown center" id="countdown">48:59:45</div>
+                            <div class="countdown center">48:59:45</div>
                             <div class="col s0 m2 l2 xl2"></div>
                             <div class="col s12 m8 l8 xl8">
                                 <div class="frase-top center">
@@ -67,17 +65,17 @@
                                 </div>
                             </div>
 
-
-                        </div>
-                        <div class="col s12 m4 l4 xl4">
-                            <img src="img/logo.png" height='450em' width='auto'>
+                            
+                        </div> 
+                        <div class="col s12 m4 l4 xl4" >
+                            <img src="img/logo.svg" height='450em' width='auto'>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-</section>
+
 
 <!-- ##########################  BOTÃO VOLTAR AO TOPO  ############################## -->
 
@@ -113,55 +111,55 @@
     <br><br><br>
 </section>
 <!-- ##################################  Destaques  ###################################### -->
-<section id="destaques" class="background-grafite">
-    <br><br><br>
-    <div class="container">
-        <div class="row" id="text-white">
-            <h3 class="center font-primaria">DESTAQUES</h3>
-            <img src="img/meiodecampotitulo_branco.png" id="img-under"><br><br>
-            <div class="slider">
-                <ul class="slides">
-                    <li>
-                        <img src="img/campeao.png"> <!-- random image -->
-                        <div class="caption center-align">
-                            <h3>Campeão</h3>
-                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/regrasdojogo.png"> <!-- random image -->
-                        <div class="caption right-align">
-                            <h3>Regras do Jogo</h3>
-                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/chutetrivela.png"> <!-- random image -->
-                        <div class="caption right-align">
-                            <h3>Chute de Trivela</h3>
-                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/caiobrouxremelas.png"> <!-- random image -->
-                        <div class="caption center-align">
-                            <h3 style="background-color: black;">Caio Brou x Remelas</h3>
-                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/palermxddgame.png"> <!-- random image -->
-                        <div class="caption center-align">
-                            <h3>Palermo x DDGame</h3>
-                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                        </div>
-                    </li>
-                </ul>
+    <section id="destaques" class="background-grafite">
+        <br><br><br>
+        <div class="container">
+            <div class="row" id="text-white">
+                <h3 class="center font-primaria">DESTAQUES</h3>
+                <img src="img/meiodecampotitulo_branco.png" id="img-under"><br><br>
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/cerimoniadeabertura.png"> <!-- random image -->
+                            <div class="caption center-align">
+                                <h3>Cerimônia de Abertura</h3>
+                                <h5 class="light grey-text text-lighten-3">Abertura do festival e recepção dos convidados</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/campeao.png"> <!-- random image -->
+                            <div class="caption right-align">
+                                <h3>Dicas do Campeão</h3>
+                                <h5 class="light grey-text text-lighten-3">Palestra com Caio Brou, atual campeão mundial.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/caiobrouxremelas.png"> <!-- random image -->
+                            <div class="caption center-align">
+                                <h3 >Caio Brou x Remelas</h3>
+                                <h5 class="light grey-text text-lighten-3">Novatos em busca de status pessoal.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/z10.png"> <!-- random image -->
+                            <div class="caption right-align">
+                                <h3>Amador Cup</h3>
+                                <h5 class="light grey-text text-lighten-3">Time do zico Z10 naquela resenha.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/palermxddgame.png"> <!-- random image -->
+                            <div class="caption center-align">
+                                <h3>Palermo x DDGame</h3>
+                                <h5 class="light grey-text text-lighten-3">Um super amistoso</h5>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
             </div>
-        </div>
-    </div>
-    <br><br>
-</section>
+        </div><br><br>
+    </section>
 <!-- ##################################  Apoio  ###################################### -->
 <section id="apoio" class="container-fluid background-ice">
     <br><br><br>
