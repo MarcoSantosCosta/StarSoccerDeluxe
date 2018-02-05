@@ -106,24 +106,34 @@ body {
 .btnlogar-in {
     background-color: #64ff00 !important;
     color: #64ff00 !important;
-    height: 100% !important;
 }
 
-.btnlogar-in p {
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 1.6em !important;
+.btnlogar-in p{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+
+.btnlogar-in p:hover {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    color: #282828 !important;
+    background-color: #e6e6e6 !important;
 }
 
 .btnlogar-in a {
+    color: #282828;
+}
+/*
+.btnlogar-in a:hover{
+    background-color: #282828 !important;
     color: #282828 !important;
 }
-
+*/
 .btn, .btn-large {
     background-color: transparent !important;
     font-family: 'ncaa-michigan' !important;
     margin-bottom: 0px !important;
-
 }
 
 .nav-wrapper {
@@ -222,7 +232,7 @@ p#textperfil {
 }
 
 #margincadtitle {
-    margin-top: 40px !important;
+    margin-top: 60px !important;
     margin-bottom: 40px !important;
     font-size: 3em;
 }
