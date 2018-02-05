@@ -5,13 +5,11 @@ app.controller("CadastroController", function ($scope, $http) {
     let path = 'http://localhost/compjr/SoccerStarsDeluxe/server.php/API/';
 
 
-
-
     $scope.user = {}
 
 
     let loadStates = function () {
-         let url = path + "state";
+        let url = path + "state";
         var success = function (success) {
             $scope.states = success.data;
             console.log($scope.states);
@@ -68,14 +66,18 @@ app.controller("CadastroController", function ($scope, $http) {
     let clearValues = function (data) {
 
         data.CPF = data.CPF.replace(/[)( \- \s .]/g, "");
-        data.RG = data.RG.replace(/[)( \- \s .]/g, "");
+        if (data.RG) {
+            data.RG = data.RG.replace(/[)( \- \s .]/g, "");
+        }
+        if (data.phoneNumber) {
+            data.phoneNumber = data.phoneNumber.replace(/[)( \- \s .]/g, "");
+            data.DDD = data.phoneNumber.substring(0, 2);
+            data.phoneNumber = data.phoneNumber.substring(2, data.phoneNumber.length);
+        }
 
-        data.phoneNumber = data.phoneNumber.replace(/[)( \- \s .]/g, "");
-        data.DDD = data.phoneNumber.substring(0, 2);
-        data.phoneNumber = data.phoneNumber.substring(2, data.phoneNumber.length);
-
-        data.CEP = data.CEP.replace(/[)( \- \s .]/g, "");
-
+        if (data.CEP) {
+            data.CEP = data.CEP.replace(/[)( \- \s .]/g, "");
+        }
         return data;
     };
 
@@ -124,11 +126,12 @@ app.controller("CadastroController", function ($scope, $http) {
                 alert('Acertou Mizeravi');
             };
             var error = function (error) {
-                console.log(error);
+                console.log(error.data.errorUser[0]);
+                if (error.data.errorUser[0] === '23000') {
+                    Materialize.toast('Acho que você já usou esse email &nbsp<i class="em em-eyes"></i>', 2000);
+                }
             };
             $http.post(url, data).then((response) => success(response), (response) => error(response))
         }
     };
-
-})
-;
+});

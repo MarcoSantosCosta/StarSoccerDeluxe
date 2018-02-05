@@ -10,8 +10,9 @@ app.controller("EditarController", function ($scope, $http) {
         if (resp) {
             $scope.user = resp.data;
             $scope.user.data.address.stateID = "" + $scope.user.data.address.stateID;
-            console.log($scope.user.data.address.stateID);
-            $scope.user.data.phoneNumber = "" + $scope.user.data.phone.DDD + "" + $scope.user.data.phone.phoneNumber;
+            if ($scope.user.data.phone.phoneNumber) {
+                $scope.user.data.phoneNumber = "" + $scope.user.data.phone.DDD + "" + $scope.user.data.phone.phoneNumber;
+            }
             console.log($scope.user);
         } else {
             window.location.href = 'index.html';
@@ -21,14 +22,20 @@ app.controller("EditarController", function ($scope, $http) {
 
 
     let clearValues = function (data) {
-
-        data.RG = data.RG.replace(/[)( \- \s .]/g, "");
-        data.phoneNumber = data.phoneNumber.replace(/[)( \- \s .]/g, "");
-        data.DDD = data.phoneNumber.substring(0, 2);
-        data.phoneNumber = data.phoneNumber.substring(2, data.phoneNumber.length);
-        data.cep = "" + data.cep;
-        data.cep = data.cep.replace(/[)( \- \s .]/g, "");
-
+        data.stateID = 13;
+        console.log(data.stateID)
+        if (data.RG) {
+            data.RG = data.RG.replace(/[)( \- \s .]/g, "");
+        }
+        if (data.phoneNumber) {
+            data.phoneNumber = data.phoneNumber.replace(/[)( \- \s .]/g, "");
+            data.DDD = data.phoneNumber.substring(0, 2);
+            data.phoneNumber = data.phoneNumber.substring(2, data.phoneNumber.length);
+        }
+        if (data.CEP) {
+            data.CEP = ''+data.CEP;
+            data.CEP = data.CEP.replace(/[)( \- \s .]/g, "");
+        }
         return data;
     };
 
@@ -64,26 +71,23 @@ app.controller("EditarController", function ($scope, $http) {
                 birthday: $scope.user.data.birthday,
                 RG: $scope.user.data.rg,
                 phoneNumber: $scope.user.data.phoneNumber,
-                cep: $scope.user.data.address.cep,
+                CEP: $scope.user.data.address.cep,
                 stateID: $scope.user.data.address.stateID,
                 city: $scope.user.data.address.city,
                 street: $scope.user.data.address.street,
                 number: $scope.user.data.address.number,
                 complement: $scope.user.data.address.complement,
-                region: $scope.user.data.address.district,
+                district: $scope.user.data.address.district,
             };
             let header = {
                 headers: {'Authorization': 'Bearer ' + token}
             };
-
-            console.log("PQPQPQPQP");
-            console.log(data);
             data = clearValues(data);
             console.log(data);
-            var success = function (success) {
+            let success = function (success) {
                 alert('Acertou Mizeravi');
             };
-            var error = function (error) {
+            let error = function (error) {
                 console.log(error);
             };
             $http.put(url, data, header).then((response) => success(response), (response) => error(response))
