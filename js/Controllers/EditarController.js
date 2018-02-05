@@ -1,12 +1,17 @@
 var app = angular.module('Editar', []);
 
 app.controller("EditarController", function ($scope, $http) {
+
+    $scope.oldPass = '';
+    $scope.password = '';
+    $scope.confirmPassword = '';
+
     var callbackFunc = function (resp) {
         if (resp) {
             $scope.user = resp.data;
             $scope.user.data.address.stateID = "" + $scope.user.data.address.stateID;
             console.log($scope.user.data.address.stateID);
-            $scope.user.data.phoneNumber = "" + $scope.user.data.phone.DDD + $scope.user.data.phone.phoneNumber;
+            $scope.user.data.phoneNumber = "" + $scope.user.data.phone.DDD + "" + $scope.user.data.phone.phoneNumber;
             console.log($scope.user);
         } else {
             window.location.href = 'index.html';
@@ -39,10 +44,20 @@ app.controller("EditarController", function ($scope, $http) {
     };
 
 
+    let validate2 = function () {
+        var result = true;
+        if ($scope.password !== $scope.confirmPassword) {
+            Materialize.toast('Vish! As senhas não conferem &nbsp<i class="em em-scream"></i>', 2000);
+            result = false;
+        }
+        return result;
+
+    };
+
+
     $scope.editar = function () {
-        alert();
         if (validate()) {
-            let url = path + "user/"+$scope.user.id;
+            let url = path + "user/" + $scope.user.id;
             let data = {
                 name: $scope.user.data.name,
                 gender: $scope.user.data.gender,
@@ -71,8 +86,48 @@ app.controller("EditarController", function ($scope, $http) {
             var error = function (error) {
                 console.log(error);
             };
-            $http.put(url, data,header).then((response) => success(response), (response) => error(response))
+            $http.put(url, data, header).then((response) => success(response), (response) => error(response))
         }
+    };
+
+
+    realmenteAlterarSenha = function () {
+        if (validate2()) {
+            let url = path + "auth/alterar_senha/" + $scope.user.id;
+            let teste = {
+                    password: $scope.password,
+                }
+            ;
+            let header = {
+                headers: {'Authorization': 'Bearer ' + token}
+            };
+            console.log(teste);
+            var success = function (success) {
+                alert('senha nova negão');
+            };
+            var error = function (error) {
+                console.log(error);
+            };
+            $http.put(url, teste, header).then((response) => success(response), (response) => error(response))
+        }
+    };
+
+    $scope.alterarSenha = function () {
+        alert('ta pegando fogo bixo');
+        let url = path + "auth/login";
+        let data = {
+            email: $scope.user.email,
+            password: $scope.oldPass,
+        };
+        console.log(data);
+        var success = function (success) {
+            realmenteAlterarSenha();
+        };
+        var error = function (error) {
+            Materialize.toast('Você lembra bem sua senha antiga?&nbsp<i class="em em-scream"></i>', 2000);
+            result = false;
+        };
+        $http.post(url, data).then((response) => success(response), (response) => error(response))
     };
 
 

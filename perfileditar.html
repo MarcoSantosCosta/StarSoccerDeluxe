@@ -17,6 +17,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
     <script type="text/javascript"
             src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
     </script>
     <link rel="stylesheet" href="css/toast.css">
@@ -79,7 +80,6 @@
         </nav>
     </div>
 </section>
-s
 <!-- ##################################  HOME
     #################################### -->
 <!--<section>-->
@@ -163,8 +163,8 @@ s
                                             <div class="input-field col s12 m3 l3 xl3 ">
                                                 <input value id="passwd" type="text"
                                                        class="validate input-cad"
-                                                       ng-model="password">
-                                                <label for="passwd">Nova Senha</label>
+                                                       ng-model="oldPass">
+                                                <label for="passwd">Senha antiga</label>
                                             </div>
                                             <div class="input-field col s12 m3 l3 xl3 ">
                                                 <input value id="passwd" type="text"
@@ -175,16 +175,18 @@ s
                                             <div class="input-field col s12 m3 l3 xl3 ">
                                                 <input value id="passwd" type="text"
                                                        class="validate input-cad"
-                                                       ng-model="password">
-                                                <label for="passwd">Nova Senha</label>
+                                                       ng-model="confirmPassword">
+                                                <label for="passwd">Confirmação Nova Senha</label>
                                             </div>
-                                            <div id="margin-btns-perfil" class="col s12 m3 l3 xl3">
-                                                <div class="btnconfirmar-out">
-                                                    <div class="btnconfirmar-in center">
-                                                        <a href="#salvar" class="font-primaria">SALVAR</a>
+                                            <button class="buttonHide" ng-click="alterarSenha()">
+                                                <div id="margin-btns-perfil" class="col s12 m3 l3 xl3">
+                                                    <div class="btnconfirmar-out">
+                                                        <div class="btnconfirmar-in center">
+                                                            <a class="font-primaria">ALTERAR</a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </button>
                                         </div>
 
 
@@ -291,11 +293,11 @@ s
                 <br>
                 <div class="row marginrow">
                     <div class="col s12 m10 l10 x10"></div>
-                    <button class="buttonHide">
+                    <button class="buttonHide" ng-click="editar()">
                         <div class="col s12 m2 l2 xl2 padding-top">
                             <div class="btnconfirmar-out">
                                 <div class="btnconfirmar-in center">
-                                    <a class="font-primaria" ng-click="editar()"><p>SALVAR</p></a>
+                                    <a class="font-primaria"><p>SALVAR</p></a>
                                 </div>
                             </div>
                         </div>
