@@ -10,9 +10,11 @@ autenticar = function (http, callbackFunc) {
     var success = function (success) {
         this.user = success;
         callbackFunc(success);
-        // window.location.href = "eventos.html";
     };
-    http.get(url, header).then((response) => success(response), (response) => error(response))
+    var fail = function (error) {
+        callbackFunc(false);
+    };
+    http.get(url, header).then((response) => success(response), (response) => fail(response))
 };
 
 deslogar = function () {

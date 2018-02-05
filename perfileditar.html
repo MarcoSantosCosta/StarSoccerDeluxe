@@ -27,13 +27,6 @@
 <section id="header">
     <div class="navbar-fixed">
         <nav>
-            <ul id="dropdown" class="dropdown-content">
-                <li><a href="#!">one</a></li>
-                <li><a href="#!">two</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">three</a></li>
-            </ul>
-
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse">
@@ -55,10 +48,17 @@
                         <a href="logar.html" class="font-primaria"><p>ENTRAR</p></a>
                     </div>
                 </div>
-                <ul class="right hide-on-med-and-down">
+                <ul class="right hide-on-med-and-down" ng-if="user">
                     <!-- Dropdown Trigger -->
-                    <li ng-if="user"><a class="dropdown-button" href="#" data-activates="dropdown">{{user.name}}<i
+                    <li class="circle"><p>{{user.data.name.substring(0,1)}}</p></li>
+                    <li ng-if="user"><a class="dropdown-button" href="#" data-activates="dropdown" onclick="drop()">{{user.data.name}}<i
                             class="material-icons right">arrow_drop_down</i></a></li>
+                    <br>
+                    <div class="drop">
+                        <div class="iten-drop "><a href="perfileditar.html">Perfil</a></div>
+                        <div class="iten-drop"><a href="eventos.html">Eventos</a></div>
+                        <div class="iten-drop" onclick="deslogar()">Sair</div>
+                    </div>
                 </ul>
 
                 <!--
@@ -113,50 +113,85 @@
 
     <!-- ##################################  Perfil - Editar  ###################################### -->
     <section id="perfileditar" class="background-ice all-screen">
-        <div class="container" >
+        <div class="container">
             <div class="row">
                 <p id="margin-top-perfil" class="center font-primaria">PERFIL</p>
                 <img src="img/meiodecampotitulo.png" id="img-under-perfil">
-                <div class=" col s12 m12 l12 xl 12 box-background-out" >
+                <div class=" col s12 m12 l12 xl 12 box-background-out">
                     <div class="box-background-in">
                         <p id="textperfil">Dados Pessoais:</p>
                         <form>
                             <div class="row marginrow">
                                 <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="first_name" type="text" class="validate input-cad active"
+                                    <input value id="first_name" type="text" class="validate input-cad active"
                                            placeholder="" ng-model="user.data.name">
                                     <label for="first_name">Nome*</label>
                                 </div>
                                 <div class="input-field col s12 m4 l4 xl4">
                                     <select ng-model="user.data.gender">
-                                        <option value="" disabled selected>Gênero</option>
-                                        <option disabled value="F">Feminino</option>
-                                        <option disabled value="M">Masculino</option>
-                                        <option disabled value="O">Outros</option>
+                                        <option value="" selected>Gênero</option>
+                                        <option value="F">Feminino</option>
+                                        <option value="M">Masculino</option>
+                                        <option value="O">Outros</option>
                                     </select>
                                 </div>
                                 <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="dtnasc" type="text" class="validate input-cad"
+                                    <input value id="dtnasc" type="text" class="validate input-cad"
                                            placeholder="" ng-model="user.data.birthday">
                                     <label for="dtnasc">Data de Nascimento</label>
                                 </div>
                             </div>
                             <div class="row marginrow">
                                 <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="cpf" type="text" class="validate input-cad" placeholder=""
+                                    <input value id="cpf" type="text" class="validate input-cad" placeholder=""
                                            ng-model="user.data.cpf">
                                     <label for="cpf">CPF*</label>
                                 </div>
                                 <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="rg" type="text" class="validate input-cad" placeholder=""
+                                    <input value id="rg" type="text" class="validate input-cad" placeholder=""
                                            ng-model="user.data.rg">
                                     <label for="rg">RG</label>
                                 </div>
-                                <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="senha" type="password" class="validate input-cad">
-                                    <label for="senha">Senha*</label>
+                                <div class="input-field col s12 m12 l12 xl12">
+
+                                    <ul class="collapsible sem-borda" data-collapsible="accordion">
+                                        <li>
+                                            <a href="#" class="back collapsible-header sem-borda">Alterar Senha</a>
+                                            <div class="collapsible-body sem-borda">
+                                                <div class="input-field col s12 m3 l3 xl3 ">
+                                                    <input value id="passwd" type="text"
+                                                           class="validate input-cad"
+                                                           ng-model="password">
+                                                    <label for="passwd">Nova Senha</label>
+                                                </div>
+                                                <div class="input-field col s12 m3 l3 xl3 ">
+                                                    <input value id="passwd" type="text"
+                                                           class="validate input-cad"
+                                                           ng-model="password">
+                                                    <label for="passwd">Nova Senha</label>
+                                                </div>
+                                                <div class="input-field col s12 m3 l3 xl3 ">
+                                                    <input value id="passwd" type="text"
+                                                           class="validate input-cad"
+                                                           ng-model="password">
+                                                    <label for="passwd">Nova Senha</label>
+                                                </div>
+                                                <div id="margin-btns-perfil" class="col s12 m3 l3 xl3">
+                                                    <div class="btnconfirmar-out">
+                                                        <div class="btnconfirmar-in center">
+                                                            <a href="#salvar" class="font-primaria">SALVAR</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </li>
+
+                                    </ul>
                                 </div>
                             </div>
+
                             <br>
                         </form>
                     </div>
@@ -165,12 +200,12 @@
                         <form>
                             <div class="row marginrow">
                                 <div class="input-field col s12 m8 l8 xl8">
-                                    <input disabled id="email" type="text" class="validate input-cad" placeholder=""
+                                    <input id="email" type="text" class="validate input-cad" placeholder=""
                                            ng-model="user.email">
                                     <label for="email">E-mail*</label>
                                 </div>
                                 <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="tel" type="text" class="validate input-cad" placeholder=""
+                                    <input value id="tel" type="text" class="validate input-cad" placeholder=""
                                            ng-model="user.data.phoneNumber">
                                     <label for="tel">Telefone</label>
                                 </div>
@@ -183,36 +218,36 @@
                         <form>
                             <div class="row marginrow">
                                 <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="endereço" type="text" class="validate input-cad"
+                                    <input value id="endereço" type="text" class="validate input-cad"
                                            placeholder="" ng-model="user.data.address.street">
                                     <label for="endereço">Endereço</label>
                                 </div>
 
                                 <div class="input-field col s12 m4 l4 x4"> <!-- Misturar Numero e Complemento -->
-                                    <input disabled value id="numero" type="text" class="validate input-cad"
+                                    <input value id="numero" type="text" class="validate input-cad"
                                            placeholder="" ng-model="user.data.address.number">
                                     <label for="numero">Número</label>
                                 </div>
                                 <div class="input-field col s12 m4 l4 xl4"> <!-- Misturar Numero e Complemento -->
-                                    <input disabled value id="compl" type="text" class="validate input-cad"
+                                    <input value id="compl" type="text" class="validate input-cad"
                                            placeholder="" ng-model="user.data.address.complement">
                                     <label for="compl">Complemento</label>
                                 </div>
                                 <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="bairro" type="text" class="validate input-cad"
+                                    <input value id="bairro" type="text" class="validate input-cad"
                                            placeholder="" ng-model="user.data.address.district">
                                     <label for="bairro">Bairro</label>
                                 </div>
                             </div>
                             <div class="row marginrow">
                                 <div class="input-field col s12 m5 l5 xl5">
-                                    <input disabled value id="cidade" type="text" class="validate input-cad"
+                                    <input value id="cidade" type="text" class="validate input-cad"
                                            placeholder="" ng-model="user.data.address.city">
                                     <label for="cidade">Cidade</label>
                                 </div>
                                 <div class="input-field col s12 m3 l3 xl3">
                                     <select ng-model="user.data.address.state.acronym">
-                                        <option value="" disabled selected>Estado</option>
+                                        <option value="" >Estado</option>
                                         <option value=1>AC</option>
                                         <option value=2>AL</option>
                                         <option value=3>AP</option>
@@ -243,7 +278,7 @@
                                     </select>
                                 </div>
                                 <div class="input-field col s12 m4 l4 xl4">
-                                    <input disabled value id="cep" type="text" class="validate input-cad" placeholder=""
+                                    <input value id="cep" type="text" class="validate input-cad" placeholder=""
                                            ng-model="user.data.address.cep">
                                     <label for="cep">CEP</label>
                                 </div>
@@ -251,31 +286,31 @@
                             <br>
                         </form>
                     </div>
-                </div>
-                <!--
-                                <div class="input-field col s12 m6 l6 xl6">
-                                    <input id="confirmarsenha" type="password" class="validate input-cad">
-                                    <label for="confirmarsenha">Confirmar Senha*</label>
+                    <div class="row marginrow">
+                        <div class="col s12 m8 l8 x8"></div>
+
+                        <div id="margin-btns-perfil" class="col s12 m2 l2 xl2 padding-top">
+                            <div class="btnconfirmar-out ">
+                                <div class="btnconfirmar-in center">
+                                    <a href="#salvar" class="font-primaria"><p>EDITAR</p></a>
                                 </div>
-                            -->
-                <div class="row marginrow">
-                    <div class="col s12 m2 l2 x2"></div>
-                    <div id="margin-btns-perfil" class="col s12 m4 l4 xl4 padding-top">
-                        <div class="btnalterarsenha-out">
-                            <div class="btnalterarsenha-in center">
-                                <a href="#alterarsenha" class="font-primaria"><p>ALTERAR SENHA</p></a>
                             </div>
                         </div>
-                    </div>
-                    <div id="margin-btns-perfil" class="col s12 m3 l3 xl3 padding-top">
-                        <div class="btnconfirmar-out">
-                            <div class="btnconfirmar-in center">
-                                <a href="#salvar" class="font-primaria"><p>SALVAR</p></a>
+                        <div id="margin-btns-perfil" class="col s12 m2 l2 xl2 padding-top">
+                            <div class="btnconfirmar-out">
+                                <div class="btnconfirmar-in center">
+                                    <a href="#salvar" class="font-primaria"><p>SALVAR</p></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+        </div>
+        <br>
+        <br>
+        <br>
     </section>
     <!-- ##################################  Contato  ###################################### -->
     <section id="contato" class="background-grafite">
@@ -325,6 +360,7 @@
     <script src="js/Countdown.js"></script>
     <script src="js/Securrity.js"></script>
     <script src="js/Controllers/EditarController.js"></script>
+    <script src="js/Drop.js"></script>
 
 
     <script>

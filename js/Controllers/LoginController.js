@@ -8,7 +8,6 @@ app.controller("LoginController", function ($scope, $http) {
     $scope.logar = function () {
         $scope.error = "";
 
-        alert('omaewa mou sindeiru');
         let url = path + "auth/login";
         let data = $scope.user;
         var success = function (success) {

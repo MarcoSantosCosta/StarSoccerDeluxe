@@ -18,12 +18,6 @@
 <!-- ##################################  MENU  ###################################### -->
 <div class="navbar-fixed">
     <nav>
-        <ul id="dropdown" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-        </ul>
 
         <div class="nav-wrapper">
             <a href="#" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
@@ -54,7 +48,7 @@
             <ul class="right hide-on-med-and-down" ng-if="user">
                 <!-- Dropdown Trigger -->
                 <li class="circle"><p>{{user.data.name.substring(0,1)}}</p></li>
-                <li ng-if="user"><a class="dropdown-button" href="#" data-activates="dropdown" ng-click="drop()">{{user.data.name}}<i
+                <li ng-if="user"><a class="dropdown-button" href="#" data-activates="dropdown" onclick="drop()">{{user.data.name}}<i
                         class="material-icons right">arrow_drop_down</i></a></li>
                 <br>
                 <div class="drop">
@@ -97,7 +91,7 @@
 
                     <div class="row">
                         <div class="col s12 m8 l8 xl8">
-                            <div class="countdown center">48:59:45</div>
+                            <div id="countdown" class="countdown center">48:59:45</div>
                             <div class="col s0 m2 l2 xl2"></div>
                             <div class="col s12 m8 l8 xl8">
                                 <div class="frase-top center">
@@ -394,16 +388,11 @@
 
 <script src="js/Securrity.js"></script>
 <script src="js/Controllers/IndexController.js"></script>
+<script src="js/Drop.js"></script>
 
 
 <script>
-    var $doc = $('html, body');
-    $('a').click(function () {
-        $doc.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-        return false;
-    });
+
 </script>
 
 

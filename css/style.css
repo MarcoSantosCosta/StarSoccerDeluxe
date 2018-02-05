@@ -809,40 +809,49 @@ p#margin-top-perfil {
     border: 1px solid #64FF00;
 }
 
-.circle-out{
+.circle-out {
     width: 45px;
     height: 45px;
     padding: 5px;
     border: 2px solid #64ff00;
-    background-color:#282828;
+    background-color: #282828;
 
 }
-.circle>p{
+
+.circle > p {
     line-height: 40px;
     margin: 0 0 0 1px;
     font-size: 20pt;
     text-align: center;
-    font-family:  'ncaa-michigan';
+    font-family: 'ncaa-michigan';
     color: #282828;
 }
 
-
-.drop{
-    background: rgba(0,0,0,0.5);
+.drop {
+    background: rgba(0, 0, 0, 0.5);
     overflow: hidden;
     height: 0;
 }
 
-.drop-show{
+.drop-show {
     height: 100% !important;
 
 }
-.iten-drop{
+
+.iten-drop {
     text-align: center;
 }
 
-.iten-drop:hover{
-   color: #64ff00;
+.iten-drop:hover {
+    color: #64ff00;
     cursor: pointer;
+}
+
+.sem-borda {
+    background: none !important;
+    border: none !important;
+    box-shadow:  none !important;
+
+
 }
 

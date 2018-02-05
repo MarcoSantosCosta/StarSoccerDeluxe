@@ -3,6 +3,10 @@ var app = angular.module('Cadastro', []);
 app.controller("CadastroController", function ($scope, $http) {
 
     let path = 'http://localhost/compjr/SoccerStarsDeluxe/server.php/API/';
+
+
+
+
     $scope.user = {}
 
 
@@ -19,26 +23,24 @@ app.controller("CadastroController", function ($scope, $http) {
     };
 
     loadStates();
-
-
     $scope.user = {};
-    $scope.user.name = "Marco";
-    // $scope.user.gender = "M";
-    $scope.user.birthday = "1997-03-04";
-    $scope.user.CPF = "07492264631";
-    $scope.user.RG = "MG14690379";
-    $scope.user.email = "marcotuliocosta@live.com";
-    $scope.user.DDD = "35";
-    $scope.user.phoneNumber = "997202705";
-    $scope.user.password = "123";
-    $scope.user.passwordConfirmation = "123";
-    $scope.user.CEP = "37901082";
-    $scope.user.stateID = "1";
-    $scope.user.city = "Passos";
-    $scope.user.street = "Suriname";
-    $scope.user.number = "92";
-    $scope.user.complement = "as";
-    $scope.user.region = "Centro";
+    // $scope.user.name = "Marco";
+    // // $scope.user.gender = "M";
+    // $scope.user.birthday = "1997-03-04";
+    // $scope.user.CPF = "07492264631";
+    // $scope.user.RG = "MG14690379";
+    // $scope.user.email = "marcotuliocosta@live.com";
+    // $scope.user.DDD = "35";
+    // $scope.user.phoneNumber = "997202705";
+    // $scope.user.password = "123";
+    // $scope.user.passwordConfirmation = "123";
+    // $scope.user.CEP = "37901082";
+    // $scope.user.stateID = "1";
+    // $scope.user.city = "Passos";
+    // $scope.user.street = "Suriname";
+    // $scope.user.number = "92";
+    // $scope.user.complement = "as";
+    // $scope.user.region = "Centro";
 
     let testeCPF = function (strCPF) {
         strCPF = strCPF.replace(/[)( \- \s .]/g, "");

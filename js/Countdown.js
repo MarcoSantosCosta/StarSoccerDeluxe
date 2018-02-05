@@ -23,7 +23,10 @@ var returnStringDate = function(now, final){
 
 var loop = function () {
     setTimeout(function () {
-        var time = returnStringDate(new Date(),final)
+
+
+        var time = returnStringDate(new Date(),final);
+        console.log(time);
         $("#countdown").html(time);
         loop();
     }, 1000);
