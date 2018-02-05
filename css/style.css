@@ -6,7 +6,7 @@
  * Made By MaterializeCSS.com
  */
 
-@font-face {
+ @font-face {
     font-family: 'ncaa-michigan';
     src: url('../fonts/NCAA Michigan St Spartans.otf');
 }
@@ -28,6 +28,24 @@ body {
     background-image:url('../img/header.png');
     height:100vh;
 }
+.box-header-eventos{
+    background-position:left;
+    background-attachment:fixed;
+    background-size:110%;
+    background-repeat:no-repeat;
+    margin-top:0px;
+    background-image:url('../img/background-eventos.png');
+    height:100vh;
+}
+.box-header-perfil{
+    background-position:left;
+    background-attachment:fixed;
+    background-size:110%;
+    background-repeat:no-repeat;
+    margin-top:0px;
+    background-image:url('../img/background-perfil.png');
+    height:100vh;
+}
 .box-filter-header{
     background-color:rgba(45,45,45,0.7);
     background-size:100%;
@@ -47,6 +65,12 @@ body {
     color:#e6e6e6;
     margin-top: 0.2em;
 }
+
+.biglogo{
+     height: 30em;
+     width: auto;
+ }
+
 .frase-top{
     font-family:'ncaa-michigan';
     font-size:40pt;
@@ -61,36 +85,40 @@ body {
 
 #logossdmenu{
     height: 50px !important;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 .btnlogar-out{
-    border: 1px solid #64ff00;
-    background: none;
-    padding: 2px;
-    height: 45px;
-    line-height: 38px;
-    width: 120px;
-    margin: 10px 15px;
+    border: 1px solid #64ff00 !important;
+    background: none !important;
+    padding: 2px !important;
+    height: 45px !important;
+    line-height: 38px !important;
+    width: 120px !important;
+    margin: 10px 15px !important;
 }
 
 .btnlogar-in{
-    background-color: #64ff00;
-    color: #64ff00;
-    height: 100%;
+    background-color: #64ff00 !important;
+    color: #64ff00 !important;
+    height: 100% !important;
 }
 
 .btnlogar-in p{
-    margin: 0;
-    padding: 0;
-    font-size: 1.6em;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.6em !important;
 }
 
 .btnlogar-in a{
-    color:  #282828;
+    color:  #282828 !important;
 }
 
+.btn, .btn-large{
+    background-color: transparent !important;
+    font-family: 'ncaa-michigan' !important;
+    margin-bottom: 0px !important;
 
-
+}
 
 .nav-wrapper{
     background-color: #282828 !important;
@@ -136,6 +164,14 @@ p#paragrafo{
     margin-right: 50px !important;
 }
 
+
+p#textperfil{  
+    margin-left: 11px;
+    font-size: 1.2em;
+    color: #FFF;
+    margin-bottom: 0px !important;
+}
+
 #img-under{
     display: block;
     margin-left: auto;
@@ -147,6 +183,16 @@ p#paragrafo{
     max-height: 50px;
     margin-right: 65%;
 }
+
+
+#img-under-perfil{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 20px;
+    margin-bottom: 30px;
+}
+
 
 #img-festival{
     padding-top: 10%;
@@ -169,8 +215,13 @@ p#paragrafo{
     color: #64ff00 !important;
 }
 
+.text-ice{
+    color: #e6e6e6 !important;
+}
+
 #margincadtitle{
-    margin-top: 0px !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
     font-size: 3em;
 }
 
@@ -203,8 +254,8 @@ p#paragrafo{
 }
 
 .font-primaria{
-    font-family: 'ncaa-michigan';
-    margin-bottom: 0px;
+    font-family: 'ncaa-michigan' !important;
+    margin-bottom: 0px !important;
 }
 
 .font-secundaria{
@@ -216,10 +267,20 @@ p#paragrafo{
     background-color: #e6e6e6 !important;
 }
 
+.background-ice-eventos{
+    background-color: #e6e6e6 !important;
+    height: 50vh;
+}
+
 .background-grafite{
     background-color: #282828;
-
 }
+
+.background-grafite-login{
+    background-color: #282828;
+    height: 100vh;
+}
+
 .background-grafite-cur{
     background-color: #282828;
 }
@@ -241,9 +302,10 @@ p#paragrafo{
 
 .img-classicos{
     background-image: url("../img/botoesclassicos.png");
-    background-size: 100%;
+    /*background-size: 100%;*/
+    background-attachment: fixed;   
     background-repeat: no-repeat;
-    width: 100%;
+    /*height: 100vh;*/
 }
 
 .all-screen{
@@ -376,6 +438,101 @@ p#paragrafo{
     color:  #282828;
 }
 
+
+.btnalterarsenha-out{
+    border: 1px solid #64ff00;
+    background: none;
+    padding: 2px;
+    height: 45px;
+    line-height: 38px;
+    width: 240px;
+    margin: 0 auto;
+}
+
+.btnalterarsenha-in{
+    background-color: #64ff00;
+    color: #64ff00;
+    height: 100%;
+}
+
+.btnalterarsenha-in p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+}
+
+.btnalterarsenha-in a{
+    color:  #282828;
+}
+
+#margin-btns-perfil{ 
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.btninscrever-out{
+    border: 1px solid #64ff00;
+    background: none;
+    padding: 2px;
+    height: 45px;
+    line-height: 38px;
+    width: 130px;
+    margin: 0 auto;
+}
+
+.paddingbtn{
+    padding: 0px 25px 0px 25px;
+}
+
+.btninscrever-in{
+    background-color: #64ff00;
+    color: #64ff00;
+    height: 100%;
+}
+
+.btninscrever-in p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+}
+
+.btninscrever-in a{
+    color:  #282828;
+}
+
+
+.btncancelar-out{
+    border: 1px solid #000;
+    background: none;
+    padding: 2px;
+    height: 45px;
+    line-height: 38px;
+    width: 130px;
+    margin: 0 auto;
+}
+
+.btncancelar-in{
+    background-color: #000;
+    color: #000;
+    height: 100%;
+}
+
+.btncancelar-in p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+}
+
+.btncancelar-in a{
+    color: #e6e6e6;
+}
+
+
+table, th, td {
+    border-bottom: 1px #64FF00 solid !important;
+}
+
+
 #logossd{
     margin-top: 45px;
     margin-bottom: 45px;
@@ -457,11 +614,6 @@ p#paragrafo{
     margin-top: 10px;
 }
 
-
-.carousel .carousel-item{
-    width:100%;
-}
-
 .contato1{
     padding: 0px !important;
     margin-bottom: 0px !important;
@@ -472,48 +624,188 @@ p#paragrafo{
     padding-left: 0px !important;
 }
 
+.padding-top{
+    padding-top: 12px !important;
+}
+
+p#margin-top-eventos{
+    margin-top: 0px !important;
+    padding-top: 20px;
+    font-size: 2.9em;
+}
+
+p#margin-top-perfil{
+    margin-top: 0px !important;
+    padding-top: 20px;
+    font-size: 2.9em;
+}
+
 #curiosidades{
 
     height:100% !important;
 }
 
-@media (max-width:767px) {
-    .countdown {
-        font-size: 5em;
+@media (max-width:767px){
+    .countdown{
+        font-size:5em !important;
+        margin-top: 1.4em;
+    }
+    
+    .tabs-content {
+    height: 39em !important;
     }
 
-    .tabs-content {
-        height: 1000px !important;
+    .box-header{
+        background-color: #282828;
+        background-size: 100%;
+        background-image: none;
+    }
+
+    .nothing{
+        height: 0em;
+    }   
+    
+     .img-classicos {
+        background-image: none;
+        background-color: #282828 !important;
+    }
+
+    .frase-top{
+        font-size: 20pt;
+    }
+    
+    .biglogo{
+        height: 0px;
+        width: 0px;
+    }
+    
+    .img-midias-2{
+        margin-top: 2em;
+        height: 35px;
+    }
+
+    .nav-wrapper{
+    background-color: #181818 ;
+    }
+
+    .btnlogar-out{
+    border: 1px solid #64ff00;
+    background: none;
+    padding: 2px;
+    height: 35px;
+    line-height: 30px;
+    width: 94px;
+    margin: 10px 15px;
+    }
+
+    .btnlogar-in p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    }
+    
+    #logossdmenu{
+    height: 35px !important;
+    margin-top: 10px;
+    }
+
+    .title-contact{
+    text-align: center;
+    margin-top: 18px;
+    }
+
+
+    #img-under-contact{
+    max-height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .adresss{
+        text-align: center;
+    }
+
+     .img-midias{
+    margin-top: 20px;
+    height: 30px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+     .img-ssd{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 180px;
+ }
+
+    #upbtn{
+        display: none !important; 
     }
 }
-    .back {
-        margin-left: 15px;
-        color: #64FF00;
-    }
 
-    .back:hover {
-        text-decoration: underline #64FF00;
-    }
+.back {
+    margin-left: 15px;
+    color: #64FF00;
+}
 
-    .buttonHide {
-        background: none;
-        border: none;
-    }
+.back:hover {
+    text-decoration: underline #64FF00;
+}
 
-    .buttonHide {
-        background: none;
-        border: none;
-    }
+.buttonHide {
+    background: none;
+    border: none;
+}
 
-    .buttonHide:focus {
-        background: none;
-        border: none;
-    }
+.buttonHide {
+    background: none;
+    border: none;
+}
 
-    @media (max-width: 600px) {
-        .img-classicos {
-            background-image: none;
-            background-color: #282828 !important;
-        }
+.buttonHide:focus {
+    background: none;
+    border: none;
+}
 
-    }
+
+#sidenav-overlay{
+    opacity: 0 !important;
+    height: 0px !important;
+}
+
+.side-nav{
+    position: fixed;
+    width: 200px;
+    left: 0;
+    top: 0;
+    padding-top: 10px;
+    margin: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+     height: 100%;
+    height: calc(100% + 60px);
+    height: -moz-calc(100%);
+    padding-bottom: 60px;
+    background-color: #222222;
+    z-index: 999;
+    overflow-y: auto;
+    will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateX(-105%);
+          transform: translateX(-105%);
+     border-right: 2px  solid black;
+     border-top: 2px  solid black;
+}
+
+.side-nav li a{
+    font-size: 12pt;
+    color: white;
+}
+
+.side-nav:onclick{
+    display: none;  
+}
