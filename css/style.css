@@ -19,6 +19,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #282828;
 }
 
 .box-header {
@@ -855,3 +856,13 @@ p#margin-top-perfil {
 
 }
 
+/* Css para push  */
+.icons-midias{
+    color: #e6e6e6;
+    font-size: 2.5em;
+    margin-right: 10px;
+}
+
+.icons-midias:hover{
+    color: #64FF00;
+}
