@@ -26,7 +26,6 @@ var loop = function () {
 
 
         var time = returnStringDate(new Date(),final);
-        console.log(time);
         $("#countdown").html(time);
         loop();
     }, 1000);

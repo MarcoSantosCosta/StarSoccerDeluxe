@@ -1,9 +1,10 @@
 var path = 'http://localhost/compjr/SoccerStarsDeluxe/server.php/API/';
 var user = null;
+var token = '';
 
 autenticar = function (http, callbackFunc) {
     let url = path + 'auth/user';
-    let token = localStorage.getItem('SSDToken');
+    token = localStorage.getItem('SSDToken');
     let header = {
         headers: {'Authorization': 'Bearer ' + token}
     };
