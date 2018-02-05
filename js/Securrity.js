@@ -12,17 +12,13 @@ autenticar = function (http, callbackFunc) {
         callbackFunc(success);
         // window.location.href = "eventos.html";
     };
-    var error = function (error) {
-        alert("FUDEU");
-    };
     http.get(url, header).then((response) => success(response), (response) => error(response))
 };
 
-deslogar = function (context) {
-    localStorage.removeItem('token');
-    this.credenciais = null;
-    this.user = null;
-    context.$router.push('/login');
+deslogar = function () {
+    localStorage.removeItem('SSDToken');
+    window.location.href = 'index.html';
+
 };
 
 

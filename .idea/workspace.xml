@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8bc42bd-9c58-4b80-978c-7f18421c4616" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/Controllers/EditarController.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/Controllers/IndexController.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cadastro.html" afterPath="$PROJECT_DIR$/cadastro.html" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/eventos.html" afterPath="$PROJECT_DIR$/eventos.html" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/Controllers/CadastroController.js" afterPath="$PROJECT_DIR$/js/Controllers/CadastroController.js" />
-      <change beforePath="$PROJECT_DIR$/js/Countdown.js" afterPath="$PROJECT_DIR$/js/Countdown.js" />
-      <change beforePath="$PROJECT_DIR$/js/javascript.js" afterPath="$PROJECT_DIR$/js/javascript.js" />
-      <change beforePath="$PROJECT_DIR$/logar.html" afterPath="$PROJECT_DIR$/logar.html" />
-      <change beforePath="$PROJECT_DIR$/perfileditar.html" afterPath="$PROJECT_DIR$/perfileditar.html" />
+      <change beforePath="$PROJECT_DIR$/js/Securrity.js" afterPath="$PROJECT_DIR$/js/Securrity.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +28,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="61" column="43" lean-forward="false" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+            <state relative-caret-position="315">
+              <caret line="62" column="60" lean-forward="false" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Securrity.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Securrity.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -97,7 +98,6 @@
         <option value="$PROJECT_DIR$/js/Countdown.js" />
         <option value="$PROJECT_DIR$/js/Controllers/LoginController.js" />
         <option value="$PROJECT_DIR$/eventos.html" />
-        <option value="$PROJECT_DIR$/js/Securrity.js" />
         <option value="$PROJECT_DIR$/js/Controllers/EditarController.js" />
         <option value="$PROJECT_DIR$/logar.html" />
         <option value="$PROJECT_DIR$/js/Controllers/CadastroController.js" />
@@ -106,6 +106,7 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/Controllers/IndexController.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/Securrity.js" />
       </list>
     </option>
   </component>
@@ -211,12 +212,12 @@
       <updated>1517670533436</updated>
       <workItem from="1517670534892" duration="31724000" />
       <workItem from="1517832020223" duration="1643000" />
-      <workItem from="1517833722504" duration="10930000" />
+      <workItem from="1517833722504" duration="11423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44297000" />
+    <option name="totallyTimeSpent" value="44790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -416,14 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Securrity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eventos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -493,10 +486,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/Securrity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="61" column="43" lean-forward="false" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+        <state relative-caret-position="315">
+          <caret line="62" column="60" lean-forward="false" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
           <folding />
         </state>
       </provider>
