@@ -1,6 +1,4 @@
 var final = new Date('02/05/2018- 23:00');
-console.log(final);
-
 
 var returnStringDate = function(now, final){
     var steep = final-now;

@@ -25,57 +25,89 @@
 <body>
 	<!-- ##################################  MENU  ###################################### -->
 	<section id="header">
-		<div class="navbar-fixed">
-			<nav>
-				<div class="nav-wrapper">
-					<a href="index.html" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
-					<ul id="nav-mobile" class="left hide-on-med-and-down">
-						<li><a href="index.html#sobre">O Festival</a></li>
-						<li><a href="index.html#destaques">Destaques</a></li>
-						<li><a href="index.html#apoio">Apoio</a></li>
-						<li><a href="index.html#curiosidades">Curiosidades</a></li>
-						<li><a href="index.html#organizadores">Organizadores</a></li>
-					</ul>
-					<div class="btnlogar-out right">
-						<div class="btnlogar-in center">
-							<a href="#logar" class="font-primaria"><p>ENTRAR</p></a>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div>
+        <nav>
+            <ul id="dropdown" class="dropdown-content">
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="perfileditar.html">Perfil</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="perfileditar.html">Perfil</a></li>
+                    <li><a href="eventos.html.html">Eventos</a></li>
+                </ul>
+                <div class="btnlogar-out right" ng-show="!user">
+                    <div class="btnlogar-in center">
+                        <a href="logar.html" class="font-primaria"><p>ENTRAR</p></a>
+                    </div>
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <!-- Dropdown Trigger -->
+                    <li ng-if="user"><a class="dropdown-button" href="#" data-activates="dropdown">{{user.name}}<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+
+                <!--
+
+            <div class="btnlogar-out right">
+                <div class="btnlogar-in center">
+                    <a class='dropdown-button btn right' href='#' data-activates='dropdown1'>Entrar</a>
+                </div>
+            </div>
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="login.html">Login</a></li>
+                <li class="divider"></li>
+                <li><a href="cadastro.html">Cadastrar</a></li>
+                <li class="divider"></li>
+                <li><a href="eventos.html">Eventos</a></li>
+            </ul>-->
+            </div>
+        </nav>
 <!-- ##################################  HOME
 	#################################### -->
-<section>
-	<header class="box-header-eventos">
-		<div class="row">
-			<div class="box-filter-header">
-				<div class="col s12 m12 l12 xl12">
-					<div class="row">
-						<div class="col s12 m3 l3 xl3">
-							<img src="img/midias.png" class="center img-midias-2">
-						</div>
-					</div>
-					<div class="row" style='height: 110px;'></div>
-					<div class="row">
-						<div class="col s12 m8 l8 xl8">
-							<div class="countdown center" id="countdown">48:59:45</div>
-							<div class="col s0 m2 l2 xl2"></div>
-							<div class="col s12 m8 l8 xl8">
-								<div class="frase-top center">
-									Vem pra Resenha
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m4 l4 xl4">
-							<img src="img/logo.svg" height='450em' width='auto'>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-</section>
+<!--<section>-->
+	<!--<header class="box-header-eventos">-->
+		<!--<div class="row">-->
+			<!--<div class="box-filter-header">-->
+				<!--<div class="col s12 m12 l12 xl12">-->
+					<!--<div class="row">-->
+						<!--<div class="col s12 m3 l3 xl3">-->
+							<!--<img src="img/midias.png" class="center img-midias-2">-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="row" style='height: 110px;'></div>-->
+					<!--<div class="row">-->
+						<!--<div class="col s12 m8 l8 xl8">-->
+							<!--<div class="countdown center" id="countdown">48:59:45</div>-->
+							<!--<div class="col s0 m2 l2 xl2"></div>-->
+							<!--<div class="col s12 m8 l8 xl8">-->
+								<!--<div class="frase-top center">-->
+									<!--Vem pra Resenha-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="col s12 m4 l4 xl4">-->
+							<!--<img src="img/logo.svg" height='450em' width='auto'>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</header>-->
+<!--</section>-->
 	<!-- ##################################  Eventos  ###################################### -->
 	<section id="eventos" class="background-ice-eventos all-screen">
 		<div class="container">

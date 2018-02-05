@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Index">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -8,377 +8,404 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-    <script src = "/js/materialize.js"> </script>
-    <script> $(function(){
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script> $(function () {
         $(".button-collapse").sideNav();
     });
     </script>
 </head>
-<body>
-    <!-- ##################################  MENU  ###################################### -->
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul class="left hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#sobre">O Festival</a></li>
-                    <li><a href="#destaques">Destaques</a></li>
-                    <li><a href="#apoio">Apoio</a></li>
-                    <li><a href="#curiosidades">Curiosidades</a></li>
-                    <li><a href="#organizadores">Organizadores</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo" >
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#sobre">O Festival</a></li>
-                    <li><a href="#destaques">Destaques</a></li>
-                    <li><a href="#apoio">Apoio</a></li>
-                    <li><a href="#curiosidades">Curiosidades</a></li>
-                    <li><a href="#organizadores">Organizadores</a></li>
-                </ul>
-                <div class="btnlogar-out right">
-                    <div class="btnlogar-in center">
-                        <a href="#logar" class="font-primaria"><p>ENTRAR</p></a>
-                    </div> 
-                </div>
-                <!--
+<body ng-controller="IndexController">
+<!-- ##################################  MENU  ###################################### -->
+<div class="navbar-fixed">
+    <nav>
+        <ul id="dropdown" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
 
-                <div class="btnlogar-out right">
-                    <div class="btnlogar-in center">
-                        <a class='dropdown-button btn right' href='#' data-activates='dropdown1'>Entrar</a>
-                    </div>
-                </div>
-                <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="login.html">Login</a></li>
-                    <li class="divider"></li>
-                    <li><a href="cadastro.html">Cadastrar</a></li>
-                    <li class="divider"></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                </ul>-->
-            </div>
-        </nav>
-    </div>
-    <!-- ##################################  HOME
-    #################################### -->
-    <section id="header">
-        <header class="box-header">
-            <div class="row">
-                <div class="box-filter-header">
-                    <div class="col s12 m12 l12 xl12">
-                        <div class="row">
-                            <div class="col s12 m1 l1 xl1 center">
-                                <img src="img/midias.png" class="img-midias-2">
-                            </div>  
-                        </div>
-                        <div class="row nothing" ></div>
-
-                        <div class="row">
-                            <div class="col s12 m8 l8 xl8">
-                                <div class="countdown center">48:59:45</div>
-                                <div class="col s0 m2 l2 xl2"></div>
-                                <div class="col s12 m8 l8 xl8">
-                                    <div class="frase-top center">
-                                        Vem pra Resenha
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="col s0 m4 l4 xl4" >
-                                <img src="img/logo.png" class="biglogo">
-                            </div>
-                        </div>
-                    </div>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center"><img id="logossdmenu" src="img/logossd.png"></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobre">O Festival</a></li>
+                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="#apoio">Apoio</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
+                <li><a href="#organizadores">Organizadores</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobre">O Festival</a></li>
+                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="#apoio">Apoio</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
+                <li><a href="#organizadores">Organizadores</a></li>
+            </ul>
+            <div class="btnlogar-out right" ng-show="!user">
+                <div class="btnlogar-in center">
+                    <a href="logar.html" class="font-primaria"><p>ENTRAR</p></a>
                 </div>
             </div>
-        </header>
-    </section>
-    <!-- ##########################  BOTÃO VOLTAR AO TOPO  ############################## -->
-
-    <div class="fixed-action-btn" id="upbtn">
-        <a class="btn-floating btn-large waves-effect waves-green black" href="#header">
-            <i class="material-icons">arrow_upward </i>
-        </a>
-    </div>
-
-    <!-- ##################################  SOBRE  ###################################### -->
-    <section id="sobre" class="background-ice">
-        <br><br><br>
-        <div class="container">
-            <div class="row">
-                <h3 class="center font-primaria">O FESTIVAL</h3>
-                <img src="img/meiodecampotitulo.png" id="img-under">
-                <div>
-                    <div class="col s12 l5">
-                        <p id="paragrafo" class="font-secundaria">O Soccer Star Deluxe (SSD) é um festival anual de Futebol
-                            de Botão, realizado no segundo domingo de fevereiro nos salões da Universidade Federal de Lavras
-                            (UFLA). É organizado pela Federação Internacional de Futebol de Botão (FIFB) e patrocinado pelas
-                            marcas esportistas mais renomadas do mercado.</p>
-                            <p id="paragrafo" class="font-secundaria">O evento está em sua oitava edição e continua reunindo
-                                jogadores iniciantes e campeões botonistas de todos o mundo em um mesmo ambiente, trazendo um
-                                espirito de companheirismo e competição para as mesas desse esse esporte tão carismático.</p>
-                            </div>
-                            <div class="col s12 l7">
-                                <img src="img/ofestival.png" id="img-festival" class="responsive-img">
-                            </div>
-                        </div>
-                    </div>
+            <ul class="right hide-on-med-and-down" ng-if="user">
+                <!-- Dropdown Trigger -->
+                <li class="circle"><p>{{user.data.name.substring(0,1)}}</p></li>
+                <li ng-if="user"><a class="dropdown-button" href="#" data-activates="dropdown" ng-click="drop()">{{user.data.name}}<i
+                        class="material-icons right">arrow_drop_down</i></a></li>
+                <br>
+                <div class="drop">
+                        <div class="iten-drop ">Perfil</div>
+                    <div class="iten-drop">Eventos</div>
+                    <div class="iten-drop">Sair</div>
                 </div>
-                <br><br><br>
-            </section>
-            <!-- ##################################  Destaques  ###################################### -->
-            <section id="destaques" class="background-grafite">
-                <br><br><br>
-                <div class="container">
-                    <div class="row" id="text-white">
-                        <h3 class="center font-primaria">DESTAQUES</h3>
-                        <img src="img/meiodecampotitulo_branco.png" id="img-under"><br><br>
-                        <div class="slider">
-                            <ul class="slides">
-                                <li>
-                                    <img src="img/cerimoniadeabertura.png"> <!-- random image -->
-                                    <div class="caption center-align">
-                                        <h3>Cerimônia de Abertura</h3>
-                                        <h5 class="light grey-text text-lighten-3">Abertura do festival e recepção dos convidados</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="img/campeao.png"> <!-- random image -->
-                                    <div class="caption right-align">
-                                        <h3>Dicas do Campeão</h3>
-                                        <h5 class="light grey-text text-lighten-3">Palestra com Caio Brou, atual campeão mundial.</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="img/caiobrouxremelas.png"> <!-- random image -->
-                                    <div class="caption center-align">
-                                        <h3 >Caio Brou x Remelas</h3>
-                                        <h5 class="light grey-text text-lighten-3">Novatos em busca de status pessoal.</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="img/z10.png"> <!-- random image -->
-                                    <div class="caption right-align">
-                                        <h3>Amador Cup</h3>
-                                        <h5 class="light grey-text text-lighten-3">Time do zico Z10 naquela resenha.</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="img/palermxddgame.png"> <!-- random image -->
-                                    <div class="caption center-align">
-                                        <h3>Palermo x DDGame</h3>
-                                        <h5 class="light grey-text text-lighten-3">Um super amistoso</h5>
-                                    </div>
-                                </li>
+            </ul>
 
-                            </ul>
-                        </div>
-                    </div>
-                </div><br><br>
-            </section>
-            <!-- ##################################  Apoio  ###################################### -->
-            <section id="apoio" class="container-fluid background-ice">
-                <br><br><br>
-                <div class="container">
+            <!--
+
+        <div class="btnlogar-out right">
+            <div class="btnlogar-in center">
+                <a class='dropdown-button btn right' href='#' data-activates='dropdown1'>Entrar</a>
+            </div>
+        </div>
+        <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="login.html">Login</a></li>
+            <li class="divider"></li>
+            <li><a href="cadastro.html">Cadastrar</a></li>
+            <li class="divider"></li>
+            <li><a href="eventos.html">Eventos</a></li>
+        </ul>-->
+        </div>
+    </nav>
+</div>
+<!-- ##################################  HOME
+#################################### -->
+<section id="header">
+    <header class="box-header">
+        <div class="row">
+            <div class="box-filter-header">
+                <div class="col s12 m12 l12 xl12">
                     <div class="row">
-                        <h3 class="center font-primaria">APOIO</h3>
-                        <img src="img/meiodecampotitulo.png" id="img-under">
-                        <div class="row">
-                            <div class="col s12 m4 l4 xl4 img-nike">
-                                <img id="icons-apoio" src="img/nike.png" class="responsive-img">
-                            </div>
-                            <div class="col s12 m4 l4 xl4 img-ea">
-                                <img id="icons-apoio" src="img/ea.png" class="responsive-img">
-                            </div>
-                            <div class="col s12 m4 l4 img-pepsi">
-                                <img id="icons-apoio" src="img/pepsi.png" class="responsive-img">
+                        <div class="col s12 m1 l1 xl1 center">
+                            <img src="img/midias.png" class="img-midias-2">
+                        </div>
+                    </div>
+                    <div class="row nothing"></div>
+
+                    <div class="row">
+                        <div class="col s12 m8 l8 xl8">
+                            <div class="countdown center">48:59:45</div>
+                            <div class="col s0 m2 l2 xl2"></div>
+                            <div class="col s12 m8 l8 xl8">
+                                <div class="frase-top center">
+                                    Vem pra Resenha
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col s12 m4 l4 xl4 img-heineken">
-                                <img id="icons-apoio" src="img/heineken.png" class="responsive-img">
-                            </div>
-                            <div class="col s12 m4 l4 xl4 img-emirates">
-                                <img id="icons-apoio" src="img/emirates.png" class="responsive-img">
-                            </div>
-                            <div class="col s12 m4 l4 xl4 img-unicef">
-                                <img id="icons-apoio" src="img/unicef.png" class="responsive-img">
-                            </div>
+                        <div class="col s0 m4 l4 xl4">
+                            <img src="img/logo.png" class="biglogo">
                         </div>
                     </div>
                 </div>
-                <br><br><br>
-            </section>
-            <!-- ##################################  Curiosidades  ###################################### -->
-            <section id="curiosidades" class="background-grafite-cur">
-                <br><br><br>
-                <div class="">
-                    <div class="row background-grafite-cur">
-                        <h3 class="center font-primaria" id="text-white">CURIOSIDADES</h3>
-                        <img src="img/meiodecampotitulo_branco.png" id="img-under">
-                        <br>
-                        <div class="row">
-                            <ul class="tabs">
-                                <li class="tab col s4"><a href="#reg"><b>Regras</b></a></li>
-                                <li class="tab col s4"><a href="#his"><b>História</b></a></li>
-                                <li class="tab col s4"><a href="#dad"><b>Dados</b></a></li>
-                            </ul>
+            </div>
+        </div>
+    </header>
+</section>
+<!-- ##########################  BOTÃO VOLTAR AO TOPO  ############################## -->
 
-                            <div id="reg" class="col s12 m12 l12 xl12 teste">
-                                <div class="row border-green ">
-                                    <div class="col s12 m5 l5 x5 center hide-on-small-only">
-                                        <img src="img/reg.png" class="responsive-img img-curiosidades">
-                                    </div>
-                                    <div class="col s12 m7 l7 xl7 center ">
-                                        <p class="textcuriosidades">
-                                            O jogo possui em si várias modalidades. As mais conhecidas são as modalidades de 1
-                                            toque, também conhecida como "Regra Baiana", 3 toques, nomeada como "Regra Carioca" e a
-                                            de 12 toques, batizada de "Regra Paulista". A mais famosa, a baiana, consiste em uma
-                                            sequência de jogadas definidas por pressão sobre os botôes, a fim de movimentá-los para
-                                            lugares estratégicos ou para a finalização de um gol. As outras modalidade são
-                                            constituídas de basicamente as mesmas regras, com exceção de que, ao invés de os turnos
-                                            se alternarem à cada uma jogada, eles se alternam a cada três, ou doze.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="his" class="col s12 m12 l12 xl12">
-                                <div class="row border-green">
-                                    <div class="col s12 m5 l5 x5 center hide-on-small-only">
-                                        <img src="img/his.png" class="responsive-img img-curiosidades">
-                                    </div>
-                                    <div class="col s12 m7 l7 xl7 center">
-                                        <p class="textcuriosidades">O futebol de botão foi inventado em 1930 pelo brasileiro Geraldo
-                                            Cardoso Décourt, quando esse tinha apenas 19 anos. Décourt, que também era pintor e
-                                            ator, foi um grande entusiasta do esporte até o dia de sua morte, em 1998. O dia de seu
-                                            nascimento, 14 de fevereiro, foi oficializado pelo governador Geraldo Alckmin, em São
-                                            Paulo, no ano de 2001, como o "Dia do Botonista" e até hoje comemorado pelos fãs. O
-                                            futebol de mesa foi reconhecido como uma modalidade desportiva oficial em 1977 e possui
-                                            uma confederação para regulamento e orientação (CBFM: Confederação Brasileira de Futebol
-                                            de Mesa).</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="dad" class="col s12 m12 l12 xl12">
-                                    <div class="row border-green">
-                                        <div class="col s12 m5 l5 x5 center hide-on-small-only">
-                                            <img src="img/dad.png" class="responsive-img img-curiosidades">
-                                        </div>
-                                        <div class="col s12 m7 l7 xl7 center valign-wrapper">
-                                            <p class="textcuriosidades">Já foram jogados 12.111 jogos oficiais de futebol de botão e,
-                                                nesses jogos, foram marcados mais de 65 mil gols. A maior goleada oficial já registrada
-                                                nesse esporte foi de 17 a 2 em 2008, onde o jogador Zé Rubens prevaleceu sobre o seu
-                                                adversário Edu Buzina. O time a ficar mais
-                                                tempo invicto foi o Botafogo, que permaneceu ganhando por incríveis 38 jogos
-                                                seguidos.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<div class="fixed-action-btn" id="upbtn">
+    <a class="btn-floating btn-large waves-effect waves-green black" href="#header">
+        <i class="material-icons">arrow_upward </i>
+    </a>
+</div>
+
+<!-- ##################################  SOBRE  ###################################### -->
+<section id="sobre" class="background-ice">
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <h3 class="center font-primaria">O FESTIVAL</h3>
+            <img src="img/meiodecampotitulo.png" id="img-under">
+            <div>
+                <div class="col s12 l5">
+                    <p id="paragrafo" class="font-secundaria">O Soccer Star Deluxe (SSD) é um festival anual de Futebol
+                        de Botão, realizado no segundo domingo de fevereiro nos salões da Universidade Federal de Lavras
+                        (UFLA). É organizado pela Federação Internacional de Futebol de Botão (FIFB) e patrocinado pelas
+                        marcas esportistas mais renomadas do mercado.</p>
+                    <p id="paragrafo" class="font-secundaria">O evento está em sua oitava edição e continua reunindo
+                        jogadores iniciantes e campeões botonistas de todos o mundo em um mesmo ambiente, trazendo um
+                        espirito de companheirismo e competição para as mesas desse esse esporte tão carismático.</p>
+                </div>
+                <div class="col s12 l7">
+                    <img src="img/ofestival.png" id="img-festival" class="responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</section>
+<!-- ##################################  Destaques  ###################################### -->
+<section id="destaques" class="background-grafite">
+    <br><br><br>
+    <div class="container">
+        <div class="row" id="text-white">
+            <h3 class="center font-primaria">DESTAQUES</h3>
+            <img src="img/meiodecampotitulo_branco.png" id="img-under"><br><br>
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="img/cerimoniadeabertura.png"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>Cerimônia de Abertura</h3>
+                            <h5 class="light grey-text text-lighten-3">Abertura do festival e recepção dos
+                                convidados</h5>
                         </div>
-                        <br>
-
-                    </section>
-                    <!-- ##################################  Organizadores  ###################################### -->
-                    <section id="organizadores" class="container-fluid background-ice">
-                        <br><br><br>
-                        <div class="container">
-                            <div class="row">
-                                <h3 class="center font-primaria">ORGANIZADORES</h3>
-                                <img src="img/meiodecampotitulo.png" id="img-under">
-                                <div class="row botoes-icon">
-                                    <div class="col s12 m4 l4 xl4">
-                                        <img id="icons-org" src="img/jean.png" class="responsive-img">
-                                        <h5 class="center">Jean</h5>
-                                    </div>
-                                    <div class="col s12 m4 l4 xl4">
-                                        <img id="icons-org" src="img/joao.png" class="responsive-img">
-                                        <h5 class="center ">João Neve</h5>
-                                    </div>
-                                    <div class="col s12 m4 l4 xl4">
-                                        <img id="icons-org" src="img/marco.png" class="responsive-img">
-                                        <h5 class="center">Marco</h5>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col s12 m4 l4 xl4">
-                                        <img id="icons-org" src="img/raul.png" class="responsive-img">
-                                        <h5 class="center">Raul</h5>
-                                    </div>
-                                    <div class="col s12 m4 l4 xl4">
-                                        <img id="icons-org" src="img/ueslei.png" class="responsive-img">
-                                        <h5 class="center">Ueslei</h5>
-                                    </div>
-                                    <div class="col s12 m4 l4 xl4">
-                                        <img id="icons-org" src="img/well.png" class="responsive-img">
-                                        <h5 class="center">Well</h5>
-                                    </div>
-                                </div>
-                            </div>
+                    </li>
+                    <li>
+                        <img src="img/campeao.png"> <!-- random image -->
+                        <div class="caption right-align">
+                            <h3>Dicas do Campeão</h3>
+                            <h5 class="light grey-text text-lighten-3">Palestra com Caio Brou, atual campeão
+                                mundial.</h5>
                         </div>
-                        <br><br><br>
-                    </section>
-                    <!-- ##################################  Contato  ###################################### -->
-                    <section id="contato" class="background-grafite">
-                        <div class="row contato1">
-                            <div class="col s12 m6 l6 xl6 paddingzero">
-                                <div id="map"></div>
-                            </div>  
-                            <div class="col s12 m6 l6 xl6 ">
-                                <div class="container-fluid" id="text-white">
-                                    <div class="row" class="contato1">
-                                        <div class="col s12 m12 l12 xl12">
-                                            <h1 class="font-primaria title-contact">Contato</h1>
-                                        </div>
-                                        <div class="col s12 m12 l12 xl12">
-                                            <img src="img/meiodecampotitulo_branco.png" id="img-under-contact">
-                                        </div>
-                                        <div class="col s12 m4 l4 xl4" >
-                                            <div>
-                                                <h6 class="font-secundaria adresss">Avenida Comp Junior, 333, Lavras-MG</h6>
-                                            </div>
-                                            <div>
-                                                <img src="img/midias.png" class="img-midias">
-                                            </div>
-                                        </div>
-                                        <div class="col s12 m4 l4 xl4">
-                                            <h6 class="font-secundaria title-contact">T: 55 99 99999-9999<br>M: contato@ssd.com.br</h6>
-                                        </div>
-                                        <div class="col s12 m4 l4 xl4">
-                                            <img src="img/logossd.png" class="img-ssd responsive-img">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </li>
+                    <li>
+                        <img src="img/caiobrouxremelas.png"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>Caio Brou x Remelas</h3>
+                            <h5 class="light grey-text text-lighten-3">Novatos em busca de status pessoal.</h5>
                         </div>
-                    </section>
+                    </li>
+                    <li>
+                        <img src="img/z10.png"> <!-- random image -->
+                        <div class="caption right-align">
+                            <h3>Amador Cup</h3>
+                            <h5 class="light grey-text text-lighten-3">Time do zico Z10 naquela resenha.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/palermxddgame.png"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>Palermo x DDGame</h3>
+                            <h5 class="light grey-text text-lighten-3">Um super amistoso</h5>
+                        </div>
+                    </li>
 
-                    <!--  Scripts-->
-                    <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABGj3NxgxG1lRasuPi9sEK6_gi6ylzPl8&callback=initMap">
-                </script>
-                <script src="js/materialize.js"></script>
-                <script src="js/javascript.js" type="text/javascript"></script>
-                <!-- <script src="js/init.js"></script> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</section>
+<!-- ##################################  Apoio  ###################################### -->
+<section id="apoio" class="container-fluid background-ice">
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <h3 class="center font-primaria">APOIO</h3>
+            <img src="img/meiodecampotitulo.png" id="img-under">
+            <div class="row">
+                <div class="col s12 m4 l4 xl4 img-nike">
+                    <img id="icons-apoio" src="img/nike.png" class="responsive-img">
+                </div>
+                <div class="col s12 m4 l4 xl4 img-ea">
+                    <img id="icons-apoio" src="img/ea.png" class="responsive-img">
+                </div>
+                <div class="col s12 m4 l4 img-pepsi">
+                    <img id="icons-apoio" src="img/pepsi.png" class="responsive-img">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4 l4 xl4 img-heineken">
+                    <img id="icons-apoio" src="img/heineken.png" class="responsive-img">
+                </div>
+                <div class="col s12 m4 l4 xl4 img-emirates">
+                    <img id="icons-apoio" src="img/emirates.png" class="responsive-img">
+                </div>
+                <div class="col s12 m4 l4 xl4 img-unicef">
+                    <img id="icons-apoio" src="img/unicef.png" class="responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</section>
+<!-- ##################################  Curiosidades  ###################################### -->
+<section id="curiosidades" class="background-grafite-cur">
+    <br><br><br>
+    <div class="">
+        <div class="row background-grafite-cur">
+            <h3 class="center font-primaria" id="text-white">CURIOSIDADES</h3>
+            <img src="img/meiodecampotitulo_branco.png" id="img-under">
+            <br>
+            <div class="row">
+                <ul class="tabs">
+                    <li class="tab col s4"><a href="#reg"><b>Regras</b></a></li>
+                    <li class="tab col s4"><a href="#his"><b>História</b></a></li>
+                    <li class="tab col s4"><a href="#dad"><b>Dados</b></a></li>
+                </ul>
 
-                <script src="js/angular.min.js"></script>
+                <div id="reg" class="col s12 m12 l12 xl12 teste">
+                    <div class="row border-green ">
+                        <div class="col s12 m5 l5 x5 center hide-on-small-only">
+                            <img src="img/reg.png" class="responsive-img img-curiosidades">
+                        </div>
+                        <div class="col s12 m7 l7 xl7 center ">
+                            <p class="textcuriosidades">
+                                O jogo possui em si várias modalidades. As mais conhecidas são as modalidades de 1
+                                toque, também conhecida como "Regra Baiana", 3 toques, nomeada como "Regra Carioca" e a
+                                de 12 toques, batizada de "Regra Paulista". A mais famosa, a baiana, consiste em uma
+                                sequência de jogadas definidas por pressão sobre os botôes, a fim de movimentá-los para
+                                lugares estratégicos ou para a finalização de um gol. As outras modalidade são
+                                constituídas de basicamente as mesmas regras, com exceção de que, ao invés de os turnos
+                                se alternarem à cada uma jogada, eles se alternam a cada três, ou doze.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="his" class="col s12 m12 l12 xl12">
+                    <div class="row border-green">
+                        <div class="col s12 m5 l5 x5 center hide-on-small-only">
+                            <img src="img/his.png" class="responsive-img img-curiosidades">
+                        </div>
+                        <div class="col s12 m7 l7 xl7 center">
+                            <p class="textcuriosidades">O futebol de botão foi inventado em 1930 pelo brasileiro Geraldo
+                                Cardoso Décourt, quando esse tinha apenas 19 anos. Décourt, que também era pintor e
+                                ator, foi um grande entusiasta do esporte até o dia de sua morte, em 1998. O dia de seu
+                                nascimento, 14 de fevereiro, foi oficializado pelo governador Geraldo Alckmin, em São
+                                Paulo, no ano de 2001, como o "Dia do Botonista" e até hoje comemorado pelos fãs. O
+                                futebol de mesa foi reconhecido como uma modalidade desportiva oficial em 1977 e possui
+                                uma confederação para regulamento e orientação (CBFM: Confederação Brasileira de Futebol
+                                de Mesa).</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="dad" class="col s12 m12 l12 xl12">
+                    <div class="row border-green">
+                        <div class="col s12 m5 l5 x5 center hide-on-small-only">
+                            <img src="img/dad.png" class="responsive-img img-curiosidades">
+                        </div>
+                        <div class="col s12 m7 l7 xl7 center valign-wrapper">
+                            <p class="textcuriosidades">Já foram jogados 12.111 jogos oficiais de futebol de botão e,
+                                nesses jogos, foram marcados mais de 65 mil gols. A maior goleada oficial já registrada
+                                nesse esporte foi de 17 a 2 em 2008, onde o jogador Zé Rubens prevaleceu sobre o seu
+                                adversário Edu Buzina. O time a ficar mais
+                                tempo invicto foi o Botafogo, que permaneceu ganhando por incríveis 38 jogos
+                                seguidos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+</section>
+<!-- ##################################  Organizadores  ###################################### -->
+<section id="organizadores" class="container-fluid background-ice">
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <h3 class="center font-primaria">ORGANIZADORES</h3>
+            <img src="img/meiodecampotitulo.png" id="img-under">
+            <div class="row botoes-icon">
+                <div class="col s12 m4 l4 xl4">
+                    <img id="icons-org" src="img/jean.png" class="responsive-img">
+                    <h5 class="center">Jean</h5>
+                </div>
+                <div class="col s12 m4 l4 xl4">
+                    <img id="icons-org" src="img/joao.png" class="responsive-img">
+                    <h5 class="center ">João Neve</h5>
+                </div>
+                <div class="col s12 m4 l4 xl4">
+                    <img id="icons-org" src="img/marco.png" class="responsive-img">
+                    <h5 class="center">Marco</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4 l4 xl4">
+                    <img id="icons-org" src="img/raul.png" class="responsive-img">
+                    <h5 class="center">Raul</h5>
+                </div>
+                <div class="col s12 m4 l4 xl4">
+                    <img id="icons-org" src="img/ueslei.png" class="responsive-img">
+                    <h5 class="center">Ueslei</h5>
+                </div>
+                <div class="col s12 m4 l4 xl4">
+                    <img id="icons-org" src="img/well.png" class="responsive-img">
+                    <h5 class="center">Well</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</section>
+<!-- ##################################  Contato  ###################################### -->
+<section id="contato" class="background-grafite">
+    <div class="row contato1">
+        <div class="col s12 m6 l6 xl6 paddingzero">
+            <div id="map"></div>
+        </div>
+        <div class="col s12 m6 l6 xl6 ">
+            <div class="container-fluid" id="text-white">
+                <div class="row" class="contato1">
+                    <div class="col s12 m12 l12 xl12">
+                        <h1 class="font-primaria title-contact">Contato</h1>
+                    </div>
+                    <div class="col s12 m12 l12 xl12">
+                        <img src="img/meiodecampotitulo_branco.png" id="img-under-contact">
+                    </div>
+                    <div class="col s12 m4 l4 xl4">
+                        <div>
+                            <h6 class="font-secundaria adresss">Avenida Comp Junior, 333, Lavras-MG</h6>
+                        </div>
+                        <div>
+                            <img src="img/midias.png" class="img-midias">
+                        </div>
+                    </div>
+                    <div class="col s12 m4 l4 xl4">
+                        <h6 class="font-secundaria title-contact">T: 55 99 99999-9999<br>M: contato@ssd.com.br</h6>
+                    </div>
+                    <div class="col s12 m4 l4 xl4">
+                        <img src="img/logossd.png" class="img-ssd responsive-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  Scripts-->
+
+<script src="js/materialize.min.js"></script>
+<script src="js/javascript.js" type="text/javascript"></script>
+<!-- <script src="js/init.js"></script> -->
+
+<script src="js/angular.min.js"></script>
 
 
-                <script src="js/Countdown.js"></script>
+<script src="js/Countdown.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABGj3NxgxG1lRasuPi9sEK6_gi6ylzPl8&callback=initMap">
+</script>
 
-                <script>
-                    var $doc = $('html, body');
-                    $('a').click(function () {
-                        $doc.animate({
-                            scrollTop: $($.attr(this, 'href')).offset().top
-                        }, 500);
-                        return false;
-                    });
-                </script>
+<script src="js/Securrity.js"></script>
+<script src="js/Controllers/IndexController.js"></script>
 
 
-            </body>
-            </html>
+<script>
+    var $doc = $('html, body');
+    $('a').click(function () {
+        $doc.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        return false;
+    });
+</script>
+
+
+</body>
+</html>
