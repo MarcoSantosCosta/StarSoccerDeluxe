@@ -6,4 +6,5 @@ var drop = function () {
         $('.drop').addClass('drop-show');
     }
     isDrop = !isDrop;
+    return false;
 };
